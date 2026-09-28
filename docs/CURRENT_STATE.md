@@ -1,92 +1,91 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 0 — Product, Design & Agentic Governance Freeze  
-**Tracking issue:** #1  
-**Implementation status:** NOT STARTED BY DESIGN
+**Canonical phase:** PHASE 1 — Repository & Engineering Baseline  
+**Phase 0 status:** CLOSED_GREEN  
+**Previous tracking issue:** #1  
+**Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED
 
-## What exists
+## Phase 0 closeout
 
-- GitHub repository initialized.
-- Product name and high-level identity established.
-- Phase 0 governance work is being prepared on a dedicated branch.
-- Canonical product/design/agent documents are being introduced before implementation.
-- Technical north star for the first reference implementation has been approved at the architecture level.
+Phase 0 was accepted by the product owner after the product/design baseline and technical north star were reviewed.
 
-## Current accepted direction
+The accepted baseline includes:
 
-Wening UI is intended to be an original, reusable, information-first application design system.
+- Wening UI identity and product positioning;
+- information-first, calm, structured design principles;
+- Light + Dark + System theme direction;
+- operational/focus mode as a first-class product requirement;
+- Gate Muktamar NU, Hermes Reflect, Tabler, shadcn/ui, and Flux as references/benchmarks rather than Wening runtime identity;
+- GitHub as canonical system of record;
+- bounded agentic workflow with stop-on-failure behavior;
+- Laravel + Blade + Livewire + Alpine + Tailwind as the first reference-implementation north star;
+- Wening-owned design tokens, component APIs, and visual language;
+- Blade/Alpine/Livewire responsibility boundaries.
 
-The current baseline includes:
+See `docs/PHASE0_CLOSEOUT.md` and `docs/DECISION_REGISTER.md`.
 
-- calm and structured visual language;
-- light-first design with native dark/system modes;
-- semantic theming;
-- data-heavy application support;
-- focused operational mode;
-- public and authenticated surfaces sharing one design language;
-- GitHub-first agentic engineering;
-- Laravel + Blade + Livewire as the first server-driven application direction;
-- Alpine.js for local browser state;
-- Tailwind CSS as the styling engine beneath Wening-owned components;
-- shadcn/ui, Flux, Tabler, Reflect, and Gate Muktamar used as references/benchmarks rather than runtime identity.
+## Current allowed work
 
-See `docs/DECISION_REGISTER.md` and `docs/TECHNICAL_DIRECTION.md` for decision status and responsibility boundaries.
+Phase 1 may now:
 
-## What is intentionally NOT decided yet
+- audit current stable runtime/framework versions;
+- choose exact supported versions;
+- decide minimal bootstrap/starter strategy;
+- define repository topology;
+- establish local development commands;
+- establish formatter/lint/static-analysis policy;
+- establish unit/feature/component/browser testing baseline;
+- establish accessibility and visual-regression tooling;
+- establish dependency/update policy;
+- establish CI and required evidence;
+- establish GitHub branch/PR protection strategy.
 
-Do not infer answers for these items:
+## Still NOT allowed
 
-- exact framework/package versions;
-- starter-kit choice or no starter kit;
-- package/repository distribution model;
-- icon library;
-- chart library;
-- font delivery strategy;
-- testing and static-analysis tooling;
-- browser/E2E tooling;
-- visual-regression tooling;
-- accessibility tooling;
-- public license.
+Until Phase 1 itself is frozen, do not:
 
-These belong to Phase 1 or later and must be evaluated explicitly.
+- implement Wening design tokens;
+- build reusable UI components;
+- build the sidebar/app shell;
+- build dashboards/tables/workflows;
+- copy/adapt implementation code from references;
+- begin packaging/release work.
 
-## Allowed work now
+A minimal framework bootstrap may be created during Phase 1 only when it is part of the approved engineering-baseline plan and exists to verify tooling/reproducibility—not to start product UI implementation.
 
-Only Phase 0 work is allowed:
+## Locked technical north star
 
-- review/refine product vision;
-- review/refine design principles;
-- confirm reference boundaries;
-- confirm agent/Git governance;
-- refine roadmap, quality gates, and UAT protocol;
-- record decisions;
-- review the approved technical north star without installing it yet.
+```text
+Laravel
+  └── Blade
+       ├── Wening presentational components
+       ├── Alpine.js for local browser state
+       └── Livewire for server/application state
 
-## Not allowed yet
+Tailwind CSS
+  └── styling engine beneath Wening-owned tokens/components
+```
 
-Do not:
+Responsibility rule:
 
-- install Laravel;
-- install Livewire/Tailwind;
-- implement tokens in CSS;
-- build components;
-- build the sidebar/dashboard;
-- import Reflect CSS;
-- adapt Tabler/shadcn/Flux source as Wening core;
-- start packaging.
+`HTML/CSS → Blade → Blade + Alpine → Livewire`
 
-## Phase 0 exit
+Use the lowest-complexity layer that correctly owns the state.
 
-Phase 0 closes only when:
+## Phase 1 exit
 
-1. all canonical Phase 0 documents are present;
-2. product owner reviews the baseline;
-3. conflicts/open questions that block Phase 1 are resolved or explicitly deferred;
-4. the Phase 0 PR passes review;
-5. `CURRENT_STATE.md` is updated to identify the next allowed phase.
+Phase 1 closes only when:
 
-## Next expected phase
+1. exact supported runtime/framework versions are recorded;
+2. repository/bootstrap strategy is reproducible;
+3. development/test/build commands are canonical;
+4. CI and static-quality gates exist and pass;
+5. dependency policy and update policy are explicit;
+6. browser/E2E, accessibility, and visual-regression strategy are decided;
+7. GitHub workflow/branch policy is documented;
+8. product owner accepts the engineering baseline;
+9. `CURRENT_STATE.md` points to Phase 2 as the next allowed phase.
 
-**PHASE 1 — Repository & Engineering Baseline**
+## Next expected phase after Phase 1
 
-Phase 1 will turn the locked technical north star into an executable engineering baseline: exact supported versions, repository structure, installation/bootstrap strategy, CI, testing/static checks, development commands, and dependency policy before design-token implementation.
+**PHASE 2 — Design Tokens & Theme Architecture**

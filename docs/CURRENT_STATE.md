@@ -2,7 +2,8 @@
 
 **Canonical phase:** PHASE 1 — Repository & Engineering Baseline  
 **Phase 0 status:** CLOSED_GREEN  
-**Previous tracking issue:** #1  
+**Tracking issue:** #3  
+**Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED
 
 ## Phase 0 closeout

@@ -1,0 +1,171 @@
+# PHASE 1 Plan — Repository & Engineering Baseline
+
+**Tracking issue:** #3  
+**Branch:** `phase/01-engineering-baseline`  
+**Status:** IN PROGRESS
+
+## Objective
+
+Operationalize the Phase 0 technical north star into a reproducible engineering baseline before any Wening visual/component implementation begins.
+
+## Execution sequence
+
+Phase 1 is intentionally split into bounded workstreams:
+
+1. **1A — Runtime & Version Freeze**
+2. **1B — Bootstrap & Repository Topology**
+3. **1C — Quality Toolchain**
+4. **1D — Browser, Accessibility & Visual Evidence**
+5. **1E — CI & GitHub Governance**
+6. **1F — Minimal Engineering Bootstrap & Proof**
+7. **1G — Phase 1 Closeout**
+
+Do not jump to 1F merely because framework installation is easy. Decisions and evidence must precede implementation.
+
+## 1A — Runtime & Version Freeze
+
+### Official evidence at phase start
+
+Laravel 13:
+
+- release line: 13.x;
+- released March 17, 2026;
+- PHP compatibility: 8.3–8.5;
+- minimum PHP: 8.3;
+- security-fix window currently extends to March 17, 2028.
+
+Source:
+https://laravel.com/framework/docs/releases
+
+PHP:
+
+- PHP 8.5 is the current stable branch at phase start;
+- PHP 8.5 remains under active support through December 31, 2027;
+- PHP 8.4 and 8.3 are also supported, but have shorter remaining support windows.
+
+Sources:
+https://www.php.net/supported-versions.php
+https://www.php.net/downloads.php
+
+Livewire:
+
+- current documentation line: 4.x;
+- supports Laravel 10+ and PHP 8.1+;
+- Livewire includes/initializes Alpine and warns against loading Alpine twice.
+
+Source:
+https://livewire.laravel.com/docs/4.x/installation
+
+Tailwind:
+
+- current Laravel/Vite guidance uses `tailwindcss` plus `@tailwindcss/vite`;
+- CSS is imported with `@import "tailwindcss"`.
+
+Source:
+https://tailwindcss.com/docs/installation/framework-guides/laravel/vite
+
+Node.js:
+
+- Node 24 (Krypton) is LTS;
+- Node 26 is Current at phase start;
+- for a reproducible application baseline, an LTS line is the default candidate unless tooling evidence requires otherwise.
+
+Source:
+https://nodejs.org/en/about/previous-releases
+
+### Initial candidates — NOT YET LOCKED
+
+- PHP: **8.5.x**
+- Laravel: **13.x**
+- Livewire: **4.x**
+- Node.js: **24 LTS**
+- Tailwind CSS: **4.x**
+- Vite: Laravel-supported current line
+
+These candidates must be validated together before becoming decision-register entries.
+
+## 1B — Bootstrap & Repository Topology
+
+Questions to resolve:
+
+- minimal fresh Laravel app or an official starter kit;
+- whether authentication belongs in Wening core, demo/reference app, or neither;
+- app-first repository vs package-first repository;
+- where reusable Wening Blade/Livewire assets live before packaging;
+- whether a dedicated internal style-guide/demo route is part of the reference app;
+- generated artifacts and environment files that must never be committed.
+
+Default hypothesis to test:
+
+> **Minimal app-first reference implementation, no pre-styled starter kit, with Wening components built inside the reference app first and packaging deferred until component contracts stabilize.**
+
+Rationale: avoids importing another product's visual opinions and reduces premature package architecture.
+
+## 1C — Quality Toolchain
+
+Evaluate a minimal but strict baseline covering:
+
+- PHP formatting;
+- PHP static analysis;
+- Laravel/Livewire feature tests;
+- architecture/contract checks;
+- JS/CSS formatting/lint where useful;
+- dependency/security audits.
+
+The goal is agent-readable, fast feedback—not maximum tool count.
+
+## 1D — Browser, Accessibility & Visual Evidence
+
+Decide how Wening will prove UI quality later without prematurely implementing UI.
+
+Required capabilities:
+
+- headless browser/E2E;
+- screenshots;
+- visual-regression comparison;
+- automated accessibility checks;
+- browser-console error detection;
+- deterministic viewport matrix.
+
+## 1E — CI & GitHub Governance
+
+Create a CI baseline that can eventually enforce:
+
+- install/reproducibility;
+- format/lint/static checks;
+- tests;
+- production asset build;
+- dependency audit as appropriate.
+
+Define which checks become required before merge once GitHub branch protection is enabled.
+
+## 1F — Minimal Engineering Bootstrap
+
+Only after the preceding decisions are documented:
+
+- create the minimal Laravel reference app baseline;
+- install the approved Livewire/Tailwind integration;
+- prove build and tests;
+- add no Wening product UI beyond a minimal technical smoke surface if necessary;
+- record canonical commands.
+
+## 1G — Closeout
+
+Phase 1 closes only after:
+
+- exact toolchain is recorded;
+- install/build/test is reproducible;
+- CI is green;
+- agent/reviewer evidence is sufficient;
+- product owner approves the engineering baseline;
+- Phase 2 is explicitly authorized.
+
+## Stop conditions
+
+Stop and surface a blocker if:
+
+- a candidate runtime is incompatible with another locked dependency;
+- a starter/bootstrap path introduces unwanted UI opinions;
+- a quality tool cannot run reproducibly in CI;
+- branch/CI policy cannot be enforced as documented;
+- the work starts drifting into design-token/component implementation.

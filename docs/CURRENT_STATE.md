@@ -5,7 +5,7 @@
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1D — Browser, Accessibility & Visual Evidence
+**Active workstream:** PHASE 1E — CI & GitHub Governance
 
 ## Phase 0 closeout
 
@@ -78,9 +78,26 @@ Frozen quality baseline:
 
 See `docs/QUALITY_TOOLCHAIN.md`.
 
+## Phase 1D result
+
+**PHASE 1D — Browser, Accessibility & Visual Evidence: CLOSED_GREEN**
+
+Frozen browser evidence:
+
+- Playwright Test 1.x;
+- axe integration;
+- Chromium canonical visual baseline;
+- Firefox/WebKit behavioral smoke;
+- committed/reviewed screenshot baselines;
+- deterministic viewport matrix;
+- console/page/network error policy;
+- manual accessibility/UAT retained.
+
+See `docs/BROWSER_EVIDENCE.md`.
+
 ## Current allowed work
 
-Phase 1D may now:
+Phase 1E may now:
 
 - audit current stable runtime/framework versions;
 - choose exact supported versions;

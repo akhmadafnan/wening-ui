@@ -15,7 +15,7 @@ Phase 1 is intentionally split into bounded workstreams:
 1. **1A — Runtime & Version Freeze — CLOSED_GREEN**
 2. **1B — Bootstrap & Repository Topology — CLOSED_GREEN**
 3. **1C — Quality Toolchain — CLOSED_GREEN**
-4. **1D — Browser, Accessibility & Visual Evidence**
+4. **1D — Browser, Accessibility & Visual Evidence — CLOSED_GREEN**
 5. **1E — CI & GitHub Governance**
 6. **1F — Minimal Engineering Bootstrap & Proof**
 7. **1G — Phase 1 Closeout**
@@ -128,18 +128,23 @@ Frozen baseline:
 
 Phase 1D is the next allowed workstream.
 
-## 1D — Browser, Accessibility & Visual Evidence
+## 1D — Browser, Accessibility & Visual Evidence — CLOSED_GREEN
 
-Decide how Wening will prove UI quality later without prematurely implementing UI.
+See `docs/BROWSER_EVIDENCE.md`.
 
-Required capabilities:
+Frozen baseline:
 
-- headless browser/E2E;
-- screenshots;
-- visual-regression comparison;
-- automated accessibility checks;
-- browser-console error detection;
-- deterministic viewport matrix.
+- Playwright Test 1.x (`^1.63`);
+- `@axe-core/playwright` 4.x;
+- Chromium as canonical visual-regression browser;
+- Firefox/WebKit behavioral smoke lanes;
+- Playwright screenshot baselines committed and reviewed;
+- Linux/Chromium canonical visual environment;
+- viewport matrix: 390×844, 768×1024, 1366×768, 1920×1080;
+- unexpected console/page/network runtime errors fail tests;
+- automated accessibility evidence plus manual UAT.
+
+Phase 1E is the next allowed workstream.
 
 ## 1E — CI & GitHub Governance
 

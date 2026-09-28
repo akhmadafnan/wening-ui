@@ -53,6 +53,13 @@ This register records product and architecture decisions that agents must not si
 | D-040 | **Laravel PAO** remains a development dependency and is part of the agentic feedback harness. | LOCKED | PAO provides compact structured output for Pest/PHPUnit/PHPStan/Artisan in AI-agent environments without changing human terminal output. |
 | D-041 | Mandatory dependency checks include `composer audit --locked` and npm audit policy; dependency updates are separate explicit workstreams, not side effects of CI. | LOCKED | Keeps security evidence visible while preserving reproducible lockfiles. |
 | D-042 | No Rector, ESLint, or Stylelint baseline is introduced in Phase 1C unless source complexity demonstrates a concrete need. | LOCKED | Minimizes tool noise and maintenance burden; tools should exist because they enforce a real contract, not to maximize tool count. |
+| D-043 | Browser/E2E testing uses **Playwright Test 1.x**, with initial constraint `^1.63`. | LOCKED | One browser tool can cover interaction, screenshots, responsive behavior, console failures, and cross-browser smoke without adding Laravel-specific browser infrastructure. |
+| D-044 | Automated accessibility checks use **@axe-core/playwright 4.x** inside Playwright; automated scans complement rather than replace manual accessibility UAT. | LOCKED | Axe integrates directly with the chosen browser harness and catches common A/AA issues while acknowledging automation limits. |
+| D-045 | Visual regression uses Playwright `toHaveScreenshot()`; committed baselines are generated/reviewed in a deterministic Linux/Chromium CI environment. | LOCKED | Screenshot rendering varies by OS/browser, so one canonical environment is necessary for stable diffs. |
+| D-046 | Visual-regression primary browser is **Chromium**; Firefox and WebKit are cross-browser behavioral/smoke lanes, not duplicate full visual-baseline lanes by default. | LOCKED | Preserves cross-browser confidence without tripling snapshot noise and CI cost. |
+| D-047 | Representative viewport baseline is **390×844 mobile, 768×1024 tablet, 1366×768 desktop, 1920×1080 wide desktop**; task-specific tests may add viewports. | LOCKED | Covers Wening's responsive and data-density use cases with deterministic dimensions. |
+| D-048 | Unexpected browser `console.error`, uncaught page errors, and failed network requests relevant to the application are test failures unless explicitly allowlisted with rationale. | LOCKED | Prevents visually passing pages from hiding runtime regressions. |
+| D-049 | Visual snapshot updates are explicit reviewed changes; CI never auto-accepts new screenshots. | LOCKED | Makes visual change a reviewable product decision instead of an automatic side effect. |
 
 ## Layer responsibility rule
 

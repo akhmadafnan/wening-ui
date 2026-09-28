@@ -5,7 +5,7 @@
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1B — Bootstrap & Repository Topology
+**Active workstream:** PHASE 1C — Quality Toolchain
 
 ## Phase 0 closeout
 
@@ -44,9 +44,27 @@ Frozen baseline:
 
 See `docs/RUNTIME_VERSION_POLICY.md`.
 
+## Phase 1B result
+
+**PHASE 1B — Bootstrap & Repository Topology: CLOSED_GREEN**
+
+Frozen bootstrap:
+
+- fresh minimal Laravel 13 app;
+- no starter kit;
+- app-first root topology;
+- package extraction deferred;
+- no auth scaffold in Phase 1;
+- SQLite local/test default;
+- internal reference/style-guide surface in the same app later;
+- conventional Wening source locations;
+- strict environment/generated-file policy.
+
+See `docs/BOOTSTRAP_TOPOLOGY.md`.
+
 ## Current allowed work
 
-Phase 1B may now:
+Phase 1C may now:
 
 - audit current stable runtime/framework versions;
 - choose exact supported versions;

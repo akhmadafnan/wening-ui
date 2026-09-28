@@ -13,7 +13,7 @@ Operationalize the Phase 0 technical north star into a reproducible engineering 
 Phase 1 is intentionally split into bounded workstreams:
 
 1. **1A — Runtime & Version Freeze — CLOSED_GREEN**
-2. **1B — Bootstrap & Repository Topology**
+2. **1B — Bootstrap & Repository Topology — CLOSED_GREEN**
 3. **1C — Quality Toolchain**
 4. **1D — Browser, Accessibility & Visual Evidence**
 5. **1E — CI & GitHub Governance**
@@ -92,22 +92,23 @@ See `docs/RUNTIME_VERSION_POLICY.md`.
 
 Product-owner approval for the PHP policy has been recorded. Phase 1A is closed; Phase 1B is the next allowed workstream.
 
-## 1B — Bootstrap & Repository Topology
+## 1B — Bootstrap & Repository Topology — CLOSED_GREEN
 
-Questions to resolve:
+See `docs/BOOTSTRAP_TOPOLOGY.md`.
 
-- minimal fresh Laravel app or an official starter kit;
-- whether authentication belongs in Wening core, demo/reference app, or neither;
-- app-first repository vs package-first repository;
-- where reusable Wening Blade/Livewire assets live before packaging;
-- whether a dedicated internal style-guide/demo route is part of the reference app;
-- generated artifacts and environment files that must never be committed.
+Frozen result:
 
-Default hypothesis to test:
+- fresh minimal Laravel 13 application;
+- **no official starter kit** in Phase 1;
+- app-first reference implementation at repository root;
+- package extraction deferred until component contracts stabilize;
+- no authentication scaffold in the engineering bootstrap;
+- SQLite default for local development/tests;
+- internal style-guide/reference surface will live in the same app when components exist;
+- conventional Laravel source placement for Wening Blade/CSS/Livewire code;
+- `.env.example` committed; secrets/generated dependency/build trees excluded.
 
-> **Minimal app-first reference implementation, no pre-styled starter kit, with Wening components built inside the reference app first and packaging deferred until component contracts stabilize.**
-
-Rationale: avoids importing another product's visual opinions and reduces premature package architecture.
+Phase 1C is the next allowed workstream.
 
 ## 1C — Quality Toolchain
 

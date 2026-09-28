@@ -4,7 +4,8 @@
 **Phase 0 status:** CLOSED_GREEN  
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
-**Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED
+**Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
+**Active workstream:** PHASE 1B — Bootstrap & Repository Topology
 
 ## Phase 0 closeout
 
@@ -25,9 +26,27 @@ The accepted baseline includes:
 
 See `docs/PHASE0_CLOSEOUT.md` and `docs/DECISION_REGISTER.md`.
 
+## Phase 1A result
+
+**PHASE 1A — Runtime & Version Freeze: CLOSED_GREEN**
+
+Frozen baseline:
+
+- PHP 8.3 compatibility floor;
+- PHP 8.4 recommended runtime/development baseline;
+- PHP 8.3 / 8.4 / 8.5 CI matrix;
+- Laravel 13.x;
+- Livewire 4.x with initial `^4.4` constraint;
+- Composer 2.10.x;
+- Node 24 LTS + npm 11.x;
+- Tailwind 4.x + Vite 8.x + laravel-vite-plugin 3.x;
+- committed Composer/npm lockfiles and reproducible install commands.
+
+See `docs/RUNTIME_VERSION_POLICY.md`.
+
 ## Current allowed work
 
-Phase 1 may now:
+Phase 1B may now:
 
 - audit current stable runtime/framework versions;
 - choose exact supported versions;

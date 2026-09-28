@@ -12,7 +12,7 @@ Operationalize the Phase 0 technical north star into a reproducible engineering 
 
 Phase 1 is intentionally split into bounded workstreams:
 
-1. **1A — Runtime & Version Freeze**
+1. **1A — Runtime & Version Freeze — CLOSED_GREEN**
 2. **1B — Bootstrap & Repository Topology**
 3. **1C — Quality Toolchain**
 4. **1D — Browser, Accessibility & Visual Evidence**
@@ -73,16 +73,24 @@ Node.js:
 Source:
 https://nodejs.org/en/about/previous-releases
 
-### Initial candidates — NOT YET LOCKED
+### Frozen result — CLOSED_GREEN
 
-- PHP: **8.5.x**
+See `docs/RUNTIME_VERSION_POLICY.md`.
+
+- PHP compatibility floor: **8.3**
+- PHP recommended baseline: **8.4**
+- PHP CI matrix: **8.3 / 8.4 / 8.5**
 - Laravel: **13.x**
-- Livewire: **4.x**
+- Livewire: **4.x**, initial constraint `^4.4`
+- Composer: **2.10.x**
 - Node.js: **24 LTS**
+- npm: **11.x**
 - Tailwind CSS: **4.x**
-- Vite: Laravel-supported current line
+- Vite: **8.x**
+- Laravel Vite plugin: **3.x**
+- Lockfiles committed; CI uses `composer install` + `npm ci`
 
-These candidates must be validated together before becoming decision-register entries.
+Product-owner approval for the PHP policy has been recorded. Phase 1A is closed; Phase 1B is the next allowed workstream.
 
 ## 1B — Bootstrap & Repository Topology
 

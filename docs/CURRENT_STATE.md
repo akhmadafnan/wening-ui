@@ -5,7 +5,7 @@
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1E — CI & GitHub Governance
+**Active workstream:** PHASE 1F — Minimal Engineering Bootstrap & Proof
 
 ## Phase 0 closeout
 
@@ -95,9 +95,26 @@ Frozen browser evidence:
 
 See `docs/BROWSER_EVIDENCE.md`.
 
+## Phase 1E result
+
+**PHASE 1E — CI & GitHub Governance: CLOSED_GREEN**
+
+Frozen CI/governance:
+
+- GitHub Actions with explicit quality/test/frontend/browser jobs;
+- PHP 8.3/8.4/8.5 test matrix;
+- PHP 8.4 primary quality lane;
+- Node 24 frontend lane;
+- Chromium browser evidence;
+- PR/squash-merge project policy for main;
+- least privilege and non-mutating CI;
+- Dependabot update workflow.
+
+See `docs/CI_GOVERNANCE.md`.
+
 ## Current allowed work
 
-Phase 1E may now:
+Phase 1F may now:
 
 - audit current stable runtime/framework versions;
 - choose exact supported versions;

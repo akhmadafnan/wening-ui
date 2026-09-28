@@ -60,6 +60,14 @@ This register records product and architecture decisions that agents must not si
 | D-047 | Representative viewport baseline is **390×844 mobile, 768×1024 tablet, 1366×768 desktop, 1920×1080 wide desktop**; task-specific tests may add viewports. | LOCKED | Covers Wening's responsive and data-density use cases with deterministic dimensions. |
 | D-048 | Unexpected browser `console.error`, uncaught page errors, and failed network requests relevant to the application are test failures unless explicitly allowlisted with rationale. | LOCKED | Prevents visually passing pages from hiding runtime regressions. |
 | D-049 | Visual snapshot updates are explicit reviewed changes; CI never auto-accepts new screenshots. | LOCKED | Makes visual change a reviewable product decision instead of an automatic side effect. |
+| D-050 | GitHub Actions is the canonical CI provider for the reference repository. | LOCKED | GitHub is already the system of record and Actions gives repository-native PR/check evidence. |
+| D-051 | CI separates **PHP quality**, **PHP compatibility tests**, **frontend build/audit**, and **browser evidence** into explicit jobs rather than one opaque script. | LOCKED | Small named jobs produce better agent/debug feedback and allow matrix-specific failures to be understood quickly. |
+| D-052 | PHP compatibility tests run on **8.3, 8.4, and 8.5**; formatting/static analysis run on the primary PHP 8.4 lane. | LOCKED | Proves the compatibility floor/forward lane without multiplying every static check three times. |
+| D-053 | Required PR evidence target is: Pint check, Larastan, Pest matrix, Composer locked audit, npm reproducible build/audit, and Chromium browser smoke/evidence once browser tests exist. | LOCKED | These checks cover source quality, compatibility, dependencies, assets, and rendered behavior. |
+| D-054 | `main` is merge-through-PR only; preferred merge strategy is **squash merge**. Direct development on `main` is prohibited by project policy even if repository settings cannot yet enforce it automatically. | LOCKED | Keeps history reviewable and ensures every accepted change has scoped evidence. |
+| D-055 | GitHub Actions workflows use least-privilege permissions, concurrency cancellation for superseded PR runs, and immutable/pinned action references where practical. | LOCKED | Reduces wasted CI and supply-chain exposure while keeping builds deterministic. |
+| D-056 | Dependency update automation should use Dependabot with grouped scheduled updates for Composer, npm, and GitHub Actions; updates remain normal reviewed PRs with full CI. | LOCKED | Makes updates visible and bounded instead of allowing silent dependency drift. |
+| D-057 | CI must never run commands that rewrite source, accept snapshots, or update dependency lockfiles. | LOCKED | CI is an evidence producer, not an autonomous mutator of the canonical branch. |
 
 ## Layer responsibility rule
 

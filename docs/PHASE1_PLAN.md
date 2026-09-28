@@ -16,7 +16,7 @@ Phase 1 is intentionally split into bounded workstreams:
 2. **1B — Bootstrap & Repository Topology — CLOSED_GREEN**
 3. **1C — Quality Toolchain — CLOSED_GREEN**
 4. **1D — Browser, Accessibility & Visual Evidence — CLOSED_GREEN**
-5. **1E — CI & GitHub Governance**
+5. **1E — CI & GitHub Governance — CLOSED_GREEN**
 6. **1F — Minimal Engineering Bootstrap & Proof**
 7. **1G — Phase 1 Closeout**
 
@@ -146,17 +146,25 @@ Frozen baseline:
 
 Phase 1E is the next allowed workstream.
 
-## 1E — CI & GitHub Governance
+## 1E — CI & GitHub Governance — CLOSED_GREEN
 
-Create a CI baseline that can eventually enforce:
+See `docs/CI_GOVERNANCE.md`.
 
-- install/reproducibility;
-- format/lint/static checks;
-- tests;
-- production asset build;
-- dependency audit as appropriate.
+Frozen baseline:
 
-Define which checks become required before merge once GitHub branch protection is enabled.
+- GitHub Actions;
+- PHP quality on PHP 8.4;
+- Pest compatibility matrix on PHP 8.3/8.4/8.5;
+- Node 24 frontend build/audit;
+- Chromium browser evidence;
+- least-privilege workflow permissions;
+- cancel superseded PR runs;
+- immutable action references where practical;
+- squash-merge/PR-only project policy for `main`;
+- Dependabot for Composer/npm/Actions;
+- CI is non-mutating: no source fixes, snapshot acceptance, or lockfile updates.
+
+Phase 1F is the next allowed workstream.
 
 ## 1F — Minimal Engineering Bootstrap
 

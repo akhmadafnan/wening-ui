@@ -5,7 +5,7 @@
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1C — Quality Toolchain
+**Active workstream:** PHASE 1D — Browser, Accessibility & Visual Evidence
 
 ## Phase 0 closeout
 
@@ -62,9 +62,25 @@ Frozen bootstrap:
 
 See `docs/BOOTSTRAP_TOPOLOGY.md`.
 
+## Phase 1C result
+
+**PHASE 1C — Quality Toolchain: CLOSED_GREEN**
+
+Frozen quality baseline:
+
+- Laravel Pint 1.x;
+- Larastan 3.x / PHPStan 2.x, level 8;
+- Pest 4.x + pest-plugin-laravel 4.x;
+- architecture tests via Pest;
+- Laravel PAO retained for agent-optimized tool output;
+- dependency audits + production asset build;
+- no unnecessary frontend lint/refactor stack yet.
+
+See `docs/QUALITY_TOOLCHAIN.md`.
+
 ## Current allowed work
 
-Phase 1C may now:
+Phase 1D may now:
 
 - audit current stable runtime/framework versions;
 - choose exact supported versions;

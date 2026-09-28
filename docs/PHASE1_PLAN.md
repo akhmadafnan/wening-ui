@@ -14,7 +14,7 @@ Phase 1 is intentionally split into bounded workstreams:
 
 1. **1A — Runtime & Version Freeze — CLOSED_GREEN**
 2. **1B — Bootstrap & Repository Topology — CLOSED_GREEN**
-3. **1C — Quality Toolchain**
+3. **1C — Quality Toolchain — CLOSED_GREEN**
 4. **1D — Browser, Accessibility & Visual Evidence**
 5. **1E — CI & GitHub Governance**
 6. **1F — Minimal Engineering Bootstrap & Proof**
@@ -110,18 +110,23 @@ Frozen result:
 
 Phase 1C is the next allowed workstream.
 
-## 1C — Quality Toolchain
+## 1C — Quality Toolchain — CLOSED_GREEN
 
-Evaluate a minimal but strict baseline covering:
+See `docs/QUALITY_TOOLCHAIN.md`.
 
-- PHP formatting;
-- PHP static analysis;
-- Laravel/Livewire feature tests;
-- architecture/contract checks;
-- JS/CSS formatting/lint where useful;
-- dependency/security audits.
+Frozen baseline:
 
-The goal is agent-readable, fast feedback—not maximum tool count.
+- Laravel Pint 1.x;
+- Larastan 3.x + PHPStan 2.x at level 8, no generated baseline;
+- Pest 4.x + Pest Laravel plugin 4.x;
+- Pest 5 deliberately rejected while PHP 8.3 is supported;
+- Pest architecture tests for enforceable contracts;
+- Laravel PAO retained as the agent-optimized feedback layer;
+- Composer/npm dependency audits;
+- Vite production build as a required engineering check;
+- Rector/ESLint/Stylelint deferred until evidence shows they are needed.
+
+Phase 1D is the next allowed workstream.
 
 ## 1D — Browser, Accessibility & Visual Evidence
 

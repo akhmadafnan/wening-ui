@@ -62,6 +62,38 @@ Public reference: https://tabler.io/
 
 Tabler is a UX/component benchmark, not a required Wening dependency and not Wening's visual identity.
 
+## Reference D — shadcn/ui
+
+Public reference: https://ui.shadcn.com/
+
+### What Wening learns from it
+
+- component anatomy and composability;
+- accessible interaction patterns;
+- clear ownership of component source;
+- useful state variants;
+- design-system documentation patterns;
+- disciplined separation between primitives and product composition.
+
+### Boundary
+
+Wening does not adopt React/Inertia merely to consume shadcn/ui. shadcn/ui is a benchmark for component quality and architecture, while Wening implements its own Blade/Livewire-oriented contracts.
+
+## Reference E — Flux UI
+
+Public reference: https://fluxui.dev/
+
+### What Wening learns from it
+
+- Livewire-oriented component ergonomics;
+- server-driven interaction patterns;
+- form and overlay behavior;
+- practical component APIs for Laravel applications.
+
+### Boundary
+
+Flux may inform UX decisions but is not a Wening core dependency. Wening owns its component APIs and visual identity.
+
 ## Reference hierarchy
 
 When interpreting these sources:
@@ -77,5 +109,7 @@ The intended synthesis is:
 
 - **Gate Muktamar:** light-side philosophy and information hierarchy;
 - **Reflect:** dark-side philosophy and operational atmosphere;
-- **Tabler:** component-behavior and completeness benchmark;
+- **Tabler:** application completeness and mature behavior benchmark;
+- **shadcn/ui:** component anatomy, composability, and accessibility benchmark;
+- **Flux UI:** Livewire-oriented ergonomics benchmark;
 - **Wening:** original implementation, semantics, branding flexibility, and agent-ready engineering discipline.

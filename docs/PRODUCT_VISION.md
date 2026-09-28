@@ -34,21 +34,30 @@ Wening is expected to support six reusable capability areas:
 
 These names describe capability areas, not a frozen package structure.
 
-## Primary integration direction
+## Primary implementation direction
 
-Laravel + Livewire products are a primary target because Wening is intended to be practical for server-driven application development.
+The first Wening reference implementation is now intentionally oriented around:
 
-However, **the implementation stack is not frozen in Phase 0**. The design system should remain conceptually framework-independent even if the first reference implementation targets Laravel/Livewire.
+- Laravel;
+- Blade;
+- Livewire;
+- Alpine.js for local browser state;
+- Tailwind CSS as the styling engine;
+- Wening-owned tokens and components.
+
+The design language remains conceptually framework-independent, but this stack is the approved implementation north star for the first production-oriented Wening build.
+
+See `docs/TECHNICAL_DIRECTION.md` and `docs/DECISION_REGISTER.md` for responsibility boundaries and locked decisions.
 
 ## Non-goals
 
 Wening is not intended to become:
 
-- a clone of Hermes, Tabler, or the Muktamar NU interface;
+- a clone of Hermes, Tabler, shadcn/ui, Flux, or the Muktamar NU interface;
+- a Bootstrap skin;
 - a collection of hundreds of unrelated components;
 - a highly decorative SaaS landing-page kit;
 - a dashboard that places every value inside a card;
-- a framework lock-in before the product model is understood;
 - a reason to rebuild browser/platform primitives poorly;
 - a substitute for product-specific branding.
 
@@ -67,7 +76,7 @@ A v1 release should make it possible to build a coherent application that includ
 - documented component behavior;
 - accessibility and keyboard expectations;
 - automated quality gates and visual evidence;
-- a reusable integration path for at least one production-oriented stack.
+- a reusable Laravel/Livewire integration path.
 
 ## Core promise
 

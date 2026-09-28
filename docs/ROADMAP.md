@@ -4,8 +4,8 @@ The roadmap is phase-gated. A later phase must not silently begin while a blocki
 
 | Phase | Focus | Exit gate |
 |---|---|---|
-| **0** | Product, Design & Agentic Governance Freeze | Vision, design principles, references, agent protocol, decisions, roadmap, quality/UAT rules approved |
-| **1** | Repository & Engineering Baseline | Technical foundation, local/dev commands, CI, static checks, branch/PR workflow, dependency policy frozen |
+| **0** | Product, Design & Agentic Governance Freeze | Vision, design principles, references, agent protocol, technical north star, decisions, roadmap, quality/UAT rules approved |
+| **1** | Repository & Engineering Baseline | Exact stack versions, bootstrap/install path, local/dev commands, CI, static checks, branch/PR workflow, dependency policy frozen |
 | **2** | Design Tokens & Theme Architecture | Semantic color, typography, spacing, radius, elevation, motion, light/dark/system behavior verified |
 | **3** | Application Shell | Desktop/mobile shell, sidebar, topbar, content frame, navigation behavior, focus/keyboard baseline |
 | **4** | Core Primitives | Buttons, inputs, selects, checks, badges, dropdowns, overlays, feedback primitives documented/tested |
@@ -29,20 +29,23 @@ The roadmap is phase-gated. A later phase must not silently begin while a blocki
 
 ## Expected Phase 1 questions
 
-Phase 1 should explicitly evaluate:
+The core direction is already locked: Laravel + Blade + Livewire + Alpine + Tailwind with Wening-owned components.
 
-- framework/runtime versions;
-- Laravel/Livewire role in the reference implementation;
-- CSS foundation;
-- JS interaction layer;
+Phase 1 should now explicitly evaluate and freeze:
+
+- exact supported framework/runtime versions;
+- installation/bootstrap strategy;
+- starter kit vs minimal bootstrap;
+- repository/package topology;
 - build tooling;
-- testing stack;
-- lint/format/static analysis;
+- formatting/lint/static analysis;
+- unit/component/feature testing stack;
 - browser/E2E strategy;
 - visual-regression strategy;
 - accessibility tooling;
 - dependency/update policy;
 - branch protection and required PR checks;
-- repository/package topology.
+- local development commands and reproducibility;
+- CI evidence format.
 
-No answer is implied merely because a tool has been mentioned during ideation.
+Phase 1 must implement the approved direction, not reopen the entire framework choice without new evidence and a decision-register change.

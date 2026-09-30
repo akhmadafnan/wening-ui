@@ -3,7 +3,7 @@
     class="min-h-dvh bg-w-page text-w-fg"
 >
     <div
-        class="min-h-dvh lg:grid"
+        class="min-h-dvh lg:grid lg:grid-cols-[var(--w-shell-sidebar-current)_minmax(0,1fr)]"
         data-w-shell-grid
         data-testid="app-shell"
     >

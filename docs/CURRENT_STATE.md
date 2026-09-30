@@ -7,7 +7,7 @@
 **Phase 2 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
 **Implementation status:** TOKEN/THEME ARCHITECTURE ONLY — REUSABLE COMPONENT IMPLEMENTATION NOT YET STARTED
-**Active workstream:** PHASE 2F — Theme Runtime & CSS/Tailwind Integration
+**Active workstream:** PHASE 2G — Token Verification, Visual UAT & Closeout
 
 ## Phase 0 closeout
 
@@ -172,18 +172,35 @@ Accepted domain specifications:
 
 These specifications are accepted for integrated implementation. Exact visual values remain subject to the combined Phase 2 product-owner UAT in 2G.
 
+## Phase 2F result
+
+**PHASE 2F — IMPLEMENTATION_GREEN**
+
+Integrated implementation is complete under `resources/css/wening` plus the bounded theme runtime/specimen harness.
+
+Verified checkpoint:
+
+- commit: `be049da4c767208d7da6b153f386e7a49b93bf69`;
+- GitHub Actions run: `36691878437`;
+- PHP Quality — GREEN;
+- PHP Tests (8.3) — GREEN;
+- PHP Tests (8.4) — GREEN;
+- PHP Tests (8.5) — GREEN;
+- Frontend — GREEN;
+- Browser / Chromium — GREEN.
+
+Corrective evidence included semantic-token guard hardening, axe-driven Light subtle-text contrast correction, and browser-independent reduced-motion assertion.
+
 ## Current allowed work
 
-Phase 2F (#11) may now:
+Phase 2G (#12) may now:
 
-- integrate the accepted token domains under `resources/css/wening`;
-- wire semantic Tailwind aliases;
-- implement Light/Dark/System theme runtime;
-- implement the `wening-theme` local preference contract;
-- provide a bounded raw-HTML token specimen for verification;
-- add focused architecture/browser/accessibility guards.
-
-Phase 2G (#12) remains blocked until required 2F implementation evidence is GREEN.
+- perform final local/cross-browser regression where relevant;
+- perform product-owner visual UAT of Light/Dark/System;
+- perform product-owner visual UAT of Comfortable/Compact density;
+- verify semantic hierarchy, typography, status colors, focus visibility, and restrained elevation;
+- record closeout evidence;
+- authorize Phase 3 only after explicit product-owner acceptance.
 
 ## Still NOT allowed
 

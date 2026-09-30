@@ -1,3 +1,7 @@
+[data-w-shell-main] {
+    min-height: calc(100dvh - var(--w-shell-topbar-height));
+}
+
 :root {
     --w-shell-sidebar-current: var(--w-shell-sidebar-expanded);
 }

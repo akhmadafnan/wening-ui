@@ -7,7 +7,7 @@
 **Phase 2 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
 **Implementation status:** TOKEN/THEME ARCHITECTURE ONLY — REUSABLE COMPONENT IMPLEMENTATION NOT YET STARTED
-**Active workstream:** PHASE 2A — Token Architecture & Naming Contract
+**Active workstream:** PHASE 2B–2E — Parallel Domain Specification
 
 ## Phase 0 closeout
 
@@ -140,19 +140,37 @@ Execution plan: `docs/PHASE2_PLAN.md`
 
 Phase 2 is intentionally limited to the design-token and theme foundation that later Wening components will consume.
 
+## Phase 2A result
+
+**PHASE 2A — Token Architecture & Naming Contract: CLOSED_GREEN**
+
+Frozen contracts:
+
+- reference/primitive → semantic → component-consumption layering;
+- canonical `--w-*` runtime namespace;
+- Wening-prefixed Tailwind aliases mapped with CSS-first theme variables;
+- Tailwind default palette remains available to host apps while Wening core uses semantic tokens;
+- Light/Dark/System root theme contract through `data-w-theme`;
+- Light fallback/default; System follows `prefers-color-scheme`;
+- theme switching by semantic-variable remapping rather than duplicated per-component dark color classes;
+- brand-primary semantics are overridable without changing component structure;
+- hard-coded product colors/raw palette bypass is prohibited in normal Wening core;
+- local theme preference storage contract uses `wening-theme`.
+
+See `docs/TOKEN_ARCHITECTURE.md` and decisions D-058 through D-065.
+
 ## Current allowed work
 
-Phase 2A may now:
+Phase 2B–2E may now proceed in parallel specification lanes:
 
-- audit the existing Tailwind/CSS baseline;
-- define token taxonomy and naming boundaries;
-- define the runtime theme contract for Light, Dark, and System;
-- define Tailwind-to-Wening semantic-variable integration;
-- define customization/brand-override boundaries;
-- define enforceable rules preventing hard-coded product color usage in Wening core;
-- update canonical documentation for accepted Phase 2 architecture.
+- #7 — 2B Color & Theme Semantics;
+- #8 — 2C Typography & Density;
+- #9 — 2D Spatial & Shape System;
+- #10 — 2E Motion, Focus & Interaction-State Tokens.
 
-Specification/audit work for 2B–2E may proceed in parallel where it does not mutate shared implementation or bypass 2A decisions.
+These lanes may research/spec concurrently, but they must preserve the Phase 2A contract and must not independently mutate overlapping shared implementation files.
+
+Phase 2F (#11) remains blocked until 2B–2E specifications are integrated and accepted. Phase 2G (#12) remains blocked until 2F is complete.
 
 ## Still NOT allowed
 

@@ -1,12 +1,5 @@
 import { expect, test } from '@playwright/test';
 
-test.beforeEach(async ({ page }) => {
-    await page.addInitScript(() => {
-        window.localStorage.removeItem('wening-theme');
-        window.localStorage.removeItem('wening-shell-sidebar');
-    });
-});
-
 test('desktop shell renders the frozen sidebar and topbar geometry', async ({ page }) => {
     await page.setViewportSize({ width: 1366, height: 768 });
     await page.goto('/');

@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('baseline');
-});
+Route::view('/', 'shell')->name('shell');
+Route::view('/tokens', 'baseline')->name('tokens');

@@ -42,7 +42,7 @@ async function contrastRatio(page, foregroundSelector, backgroundSelector) {
 
 test('defaults to the light Wening theme when no preference is stored', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     await expect(page.locator('html')).toHaveAttribute('data-w-theme', 'light');
 
@@ -53,7 +53,7 @@ test('defaults to the light Wening theme when no preference is stored', async ({
 
 test('persists and applies an explicit dark preference', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     await page.getByRole('button', { name: 'Dark' }).click();
 
@@ -69,7 +69,7 @@ test('persists and applies an explicit dark preference', async ({ page }) => {
 test('system preference follows live operating-system color-scheme changes', async ({ page }) => {
     await resetTheme(page);
     await page.emulateMedia({ colorScheme: 'dark' });
-    await page.goto('/');
+    await page.goto('/tokens');
 
     await page.getByRole('button', { name: 'System' }).click();
     await expect(page.locator('html')).toHaveAttribute('data-w-theme', 'system');
@@ -86,7 +86,7 @@ test('system preference follows live operating-system color-scheme changes', asy
 
 test('compact density remaps the shared data-row sizing contract', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     const row = page.getByTestId('density-row').first();
 
@@ -101,7 +101,7 @@ test('compact density remaps the shared data-row sizing contract', async ({ page
 test('reduced motion collapses Wening transition duration tokens', async ({ page }) => {
     await resetTheme(page);
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.goto('/');
+    await page.goto('/tokens');
 
     const duration = await page.locator('html').evaluate((element) => (
         getComputedStyle(element).getPropertyValue('--w-motion-normal').trim()
@@ -112,7 +112,7 @@ test('reduced motion collapses Wening transition duration tokens', async ({ page
 
 test('keyboard focus receives the Wening focus treatment', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     await page.keyboard.press('Tab');
 
@@ -134,7 +134,7 @@ test('keyboard focus receives the Wening focus treatment', async ({ page }) => {
 
 test('representative semantic text pairs meet normal-text contrast in light and dark', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     for (const theme of ['light', 'dark']) {
         await page.getByRole('button', { name: theme === 'light' ? 'Light' : 'Dark' }).click();
@@ -150,7 +150,7 @@ test('representative semantic text pairs meet normal-text contrast in light and 
 
 test('reference primary identity resolves to the accepted institutional green in light and dark', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     const probe = page.getByTestId('focus-probe');
 
@@ -167,7 +167,7 @@ test('reference primary identity resolves to the accepted institutional green in
 
 test('typography exposes Sora display and Inter UI roles', async ({ page }) => {
     await resetTheme(page);
-    await page.goto('/');
+    await page.goto('/tokens');
 
     const displayFamily = await page.locator('h1').evaluate((element) => getComputedStyle(element).fontFamily);
     const bodyFamily = await page.locator('body').evaluate((element) => getComputedStyle(element).fontFamily);

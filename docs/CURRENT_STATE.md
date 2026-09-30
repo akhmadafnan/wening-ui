@@ -1,13 +1,14 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 2 — CLOSED_GREEN
+**Canonical phase:** PHASE 3 — Application Shell
 **Phase 0 status:** CLOSED_GREEN  
-**Tracking issue:** #6
+**Tracking issue:** #14
 **Phase 1 status:** CLOSED_GREEN
 **Phase 2 status:** CLOSED_GREEN
+**Phase 3 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
-**Implementation status:** TOKEN/THEME FOUNDATION COMPLETE — APPLICATION SHELL NOT YET STARTED
-**Active workstream:** NONE — PHASE 3 NOT YET STARTED
+**Implementation status:** APPLICATION SHELL IN PROGRESS — CORE PRIMITIVES/DATA/WORKFLOW NOT YET STARTED
+**Active workstream:** PHASE 3C — Shell Navigation & Local State
 
 ## Phase 0 closeout
 
@@ -230,22 +231,93 @@ Final accepted implementation checkpoint:
 
 Canonical closeout: `docs/PHASE2_CLOSEOUT.md`.
 
-## Next allowed work
+## Phase 3 orientation
 
-**PHASE 3 — Application Shell**
+**PHASE 3 — IN PROGRESS**
 
-Phase 3 may begin only after Phase 2 is merged to `main` and a dedicated tracking issue/branch is opened.
+Tracking issue: **#14**
 
-Until Phase 3 is explicitly opened and scoped, do not:
+Branch: `phase/03-application-shell`
 
-- implement application-shell production code;
-- build reusable core primitives beyond what the shell strictly needs for bounded verification;
-- build data-table/workflow/operational/public production surfaces;
+Execution plan: `docs/PHASE3_PLAN.md`
+
+Phase 3 turns the accepted backend/application direction into Wening's reusable application frame.
+
+## Phase 3A result
+
+**PHASE 3A — Shell Contract & Information Architecture: CLOSED_GREEN**
+
+Frozen contracts:
+
+- persistent desktop sidebar + topbar + page-header/content-frame anatomy;
+- 256px expanded sidebar / 72px collapsed sidebar / 64px topbar;
+- server-owned current-route state;
+- browser-local collapse/mobile state;
+- native `<dialog>` mobile navigation baseline;
+- shell-specific Blade contracts under `resources/views/components/wening/shell`;
+- shell-domain tokens may use `--w-shell-*`;
+- Inter-dominant neutral shell with primary-soft green current states;
+- no generic Phase 4 primitive API leakage.
+
+Canonical spec: `docs/SHELL_ARCHITECTURE.md`.
+
+Tracking lanes:
+
+- #18 — 3B Desktop Application Shell;
+- #19 — 3C Shell Navigation & Local State;
+- #20 — 3D Responsive & Mobile Application Shell;
+- #21 — 3E Shell Visual States & Context Slots;
+- #22 — 3F Shell Accessibility & Keyboard Baseline;
+- #23 — 3G Visual UAT & Closeout.
+
+## Phase 3B result
+
+**PHASE 3B — DESKTOP_SHELL_GREEN**
+
+Verified checkpoint:
+
+- commit: `74c5837674c35de0961b09ffaef8565227c25f9a`;
+- GitHub Actions run: `36703863269`;
+- all six required jobs GREEN.
+
+Delivered:
+
+- shell-specific Blade frame;
+- 256px desktop sidebar;
+- 64px topbar;
+- page header/content frame;
+- grouped navigation/current-page semantics;
+- shell-domain tokens;
+- root shell specimen;
+- Phase 2 token specimen retained at `/tokens`.
+
+## Current allowed work
+
+Phase 3C (#19) may now:
+
+- implement desktop expanded/collapsed shell state;
+- persist desktop preference under `wening-shell-sidebar`;
+- preserve server-owned current-route state;
+- reuse existing theme/density runtime contracts;
+- add focused browser tests for state persistence and geometry;
+- keep local shell state out of Livewire.
+
+3D–3F remain bounded follow-on lanes. 3G remains blocked until implementation/accessibility evidence is ready.
+
+## Still NOT allowed
+
+Until the relevant Phase 3 workstream is approved, do not:
+
+- build the generic Core Primitives library;
+- build data-table/search/filter/bulk-action systems;
+- build workflow/Kanban/timeline systems;
+- implement operational Gate/focus-mode production surfaces;
+- implement public/frontend or production auth surfaces;
 - introduce new UI runtime dependencies;
-- bypass Phase 0–2 design/token decisions;
+- extract Wening into a package;
 - copy implementation code from references.
 
-Phase 3 should establish desktop/mobile shell structure, sidebar/topbar/content frame, navigation behavior, responsive collapse, and keyboard/focus baseline while preserving later-phase boundaries.
+A bounded shell specimen may use representative placeholder navigation/content only to prove the shell.
 
 ## Locked technical north star
 

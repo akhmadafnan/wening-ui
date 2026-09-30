@@ -1,13 +1,14 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 2 — CLOSED_GREEN
+**Canonical phase:** PHASE 3 — Application Shell
 **Phase 0 status:** CLOSED_GREEN  
-**Tracking issue:** #6
+**Tracking issue:** #14
 **Phase 1 status:** CLOSED_GREEN
 **Phase 2 status:** CLOSED_GREEN
+**Phase 3 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
-**Implementation status:** TOKEN/THEME FOUNDATION COMPLETE — APPLICATION SHELL NOT YET STARTED
-**Active workstream:** NONE — PHASE 3 NOT YET STARTED
+**Implementation status:** APPLICATION SHELL IN PROGRESS — CORE PRIMITIVES/DATA/WORKFLOW NOT YET STARTED
+**Active workstream:** PHASE 3A — Shell Contract & Information Architecture
 
 ## Phase 0 closeout
 
@@ -230,22 +231,47 @@ Final accepted implementation checkpoint:
 
 Canonical closeout: `docs/PHASE2_CLOSEOUT.md`.
 
-## Next allowed work
+## Phase 3 orientation
 
-**PHASE 3 — Application Shell**
+**PHASE 3 — IN PROGRESS**
 
-Phase 3 may begin only after Phase 2 is merged to `main` and a dedicated tracking issue/branch is opened.
+Tracking issue: **#14**
 
-Until Phase 3 is explicitly opened and scoped, do not:
+Branch: `phase/03-application-shell`
 
-- implement application-shell production code;
-- build reusable core primitives beyond what the shell strictly needs for bounded verification;
-- build data-table/workflow/operational/public production surfaces;
+Execution plan: `docs/PHASE3_PLAN.md`
+
+Phase 3 turns the accepted backend/application direction into Wening's reusable application frame.
+
+## Current allowed work
+
+Phase 3A may now:
+
+- audit the existing token/theme specimen and Laravel view structure;
+- freeze shell anatomy and shell-specific component boundaries;
+- define desktop sidebar/topbar/content-frame behavior;
+- define navigation metadata/current-state semantics;
+- define local shell state ownership;
+- define responsive/mobile drawer behavior;
+- define accessibility/keyboard requirements;
+- prepare bounded shell implementation workstreams.
+
+After 3A is frozen, shell implementation may proceed in bounded 3B–3F workstreams.
+
+## Still NOT allowed
+
+Until the relevant Phase 3 workstream is approved, do not:
+
+- build the generic Core Primitives library;
+- build data-table/search/filter/bulk-action systems;
+- build workflow/Kanban/timeline systems;
+- implement operational Gate/focus-mode production surfaces;
+- implement public/frontend or production auth surfaces;
 - introduce new UI runtime dependencies;
-- bypass Phase 0–2 design/token decisions;
+- extract Wening into a package;
 - copy implementation code from references.
 
-Phase 3 should establish desktop/mobile shell structure, sidebar/topbar/content frame, navigation behavior, responsive collapse, and keyboard/focus baseline while preserving later-phase boundaries.
+A bounded shell specimen may use representative placeholder navigation/content only to prove the shell.
 
 ## Locked technical north star
 

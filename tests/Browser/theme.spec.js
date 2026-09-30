@@ -159,8 +159,10 @@ test('reference primary identity resolves to the accepted institutional green in
         .toBe('rgb(15, 122, 69)');
 
     await page.getByRole('button', { name: 'Dark' }).click();
-    expect(await probe.evaluate((element) => getComputedStyle(element).backgroundColor))
-        .toBe('rgb(102, 196, 147)');
+
+    await expect.poll(async () => (
+        probe.evaluate((element) => getComputedStyle(element).backgroundColor)
+    )).toBe('rgb(102, 196, 147)');
 });
 
 test('typography exposes Sora display and Inter UI roles', async ({ page }) => {

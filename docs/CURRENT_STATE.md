@@ -203,6 +203,18 @@ Typography direction is now LOCKED through D-066…D-068:
 - system-ui = fallback, not canonical identity;
 - no required remote font CDN.
 
+## Product-owner visual-direction refinement
+
+Reference direction is now LOCKED through D-069…D-073:
+
+- default Wening reference primary = institutional green;
+- semantic primary remains brand-overridable;
+- Digdaya NU is an additional reference, never a cloning/dependency target;
+- public/frontend = institutional ecosystem product UI;
+- backend/application = operational admin clarity;
+- auth/entry may use restrained split branded composition;
+- previous information-first, no-card-everywhere, Light/Dark/System, density, accessibility, and originality decisions remain unchanged.
+
 ## Current allowed work
 
 Phase 2G (#12) may now:

@@ -3,7 +3,7 @@
 **Tracking issue:** #6
 **Branch:** `phase/02-design-tokens-theme`
 **Status:** IN PROGRESS
-**Active workstream:** 2F — Theme Runtime & CSS/Tailwind Integration
+**Active workstream:** 2G — Token Verification, Visual UAT & Closeout
 
 ## Objective
 
@@ -100,7 +100,7 @@ Parallel rule:
 
 ### Wave C — Integrated implementation
 
-**2F — Theme Runtime & CSS/Tailwind Implementation — ACTIVE** — tracked by #11
+**2F — Theme Runtime & CSS/Tailwind Implementation — IMPLEMENTATION_GREEN** — tracked by #11
 
 Implement only the accepted token/theme architecture.
 
@@ -129,7 +129,7 @@ Responsibilities:
 
 ### Wave D — Verification & closeout
 
-**2G — Token Verification & Closeout** — tracked by #12
+**2G — Token Verification & Closeout — ACTIVE** — tracked by #12
 
 Evidence:
 

@@ -223,6 +223,20 @@ Target behavior:
 
 The exact attribute/storage contract is frozen in 2A before implementation.
 
+## Accepted visual direction
+
+Canonical visual direction is recorded in `docs/DESIGN_DIRECTION.md`.
+
+Phase 2 reference refinements now include:
+
+- institutional-green default reference primary;
+- Sora display + Inter workhorse typography;
+- public/frontend institutional ecosystem direction;
+- backend/application operational-admin direction;
+- optional branded split authentication composition;
+- Digdaya NU as a bounded reference only;
+- no change to Wening's originality, information-first, no-card-everywhere, accessibility, density, or semantic-token principles.
+
 ## Quality rules
 
 Phase 2 must add or preserve machine-verifiable contracts where practical:

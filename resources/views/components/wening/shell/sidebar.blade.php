@@ -7,7 +7,7 @@
     id="desktop-sidebar"
     class="hidden h-dvh w-[var(--w-shell-sidebar-current)] flex-col border-r border-w-border bg-w-surface lg:flex"
     aria-label="Application sidebar"
-    data-w-shell-sidebar
+    data-w-shell-sidebar-panel
     data-testid="desktop-sidebar"
 >
     <div

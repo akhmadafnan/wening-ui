@@ -18,7 +18,7 @@ html[data-w-shell-sidebar="collapsed"] {
         transition-timing-function: var(--w-ease-standard);
     }
 
-    [data-w-shell-sidebar] {
+    [data-w-shell-sidebar-panel] {
         width: var(--w-shell-sidebar-current);
         transition-property: width;
         transition-duration: var(--w-motion-normal);

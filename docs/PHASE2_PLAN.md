@@ -3,7 +3,7 @@
 **Tracking issue:** #6
 **Branch:** `phase/02-design-tokens-theme`
 **Status:** IN PROGRESS
-**Active workstream:** 2B–2E — Parallel Domain Specification
+**Active workstream:** 2F — Theme Runtime & CSS/Tailwind Integration
 
 ## Objective
 
@@ -49,7 +49,7 @@ Exit gate:
 
 2A is frozen. 2B–2E are now authorized to proceed in parallel because they occupy distinct token domains.
 
-**2B — Color & Theme Semantics**
+**2B — Color & Theme Semantics — SPEC_GREEN**
 
 Artifacts:
 
@@ -59,7 +59,7 @@ Artifacts:
 - contrast targets;
 - system-theme behavior.
 
-**2C — Typography & Density**
+**2C — Typography & Density — SPEC_GREEN**
 
 Artifacts:
 
@@ -69,7 +69,7 @@ Artifacts:
 - comfortable/compact density model;
 - control/row sizing principles.
 
-**2D — Spatial & Shape System**
+**2D — Spatial & Shape System — SPEC_GREEN**
 
 Artifacts:
 
@@ -80,7 +80,7 @@ Artifacts:
 - elevation/shadow scale;
 - layering/z-index scale if justified.
 
-**2E — Motion, Focus & Interaction State**
+**2E — Motion, Focus & Interaction State — SPEC_GREEN**
 
 Artifacts:
 
@@ -100,7 +100,7 @@ Parallel rule:
 
 ### Wave C — Integrated implementation
 
-**2F — Theme Runtime & CSS/Tailwind Implementation** — tracked by #11
+**2F — Theme Runtime & CSS/Tailwind Implementation — ACTIVE** — tracked by #11
 
 Implement only the accepted token/theme architecture.
 

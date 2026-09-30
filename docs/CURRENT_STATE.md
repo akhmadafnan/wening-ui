@@ -1,13 +1,13 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 1 — CLOSED_GREEN
+**Canonical phase:** PHASE 2 — Design Tokens & Theme Architecture
 **Phase 0 status:** CLOSED_GREEN  
-**Tracking issue:** #3  
+**Tracking issue:** #6
 **Phase 1 status:** CLOSED_GREEN
-**Next allowed phase:** PHASE 2 — Design Tokens & Theme Architecture
-**Previous phase:** PHASE 0 — CLOSED_GREEN  
-**Implementation status:** ENGINEERING BASELINE COMPLETE — PRODUCT UI IMPLEMENTATION NOT YET STARTED
-**Active workstream:** NONE — PHASE 2 NOT YET STARTED
+**Phase 2 status:** IN PROGRESS
+**Previous phase:** PHASE 1 — CLOSED_GREEN
+**Implementation status:** TOKEN/THEME ARCHITECTURE ONLY — REUSABLE COMPONENT IMPLEMENTATION NOT YET STARTED
+**Active workstream:** PHASE 2A — Token Architecture & Naming Contract
 
 ## Phase 0 closeout
 
@@ -128,25 +128,46 @@ Product-owner UAT: **PASS**.
 
 Canonical closeout evidence is recorded in `docs/PHASE1_CLOSEOUT.md`.
 
+## Phase 2 orientation
+
+**PHASE 2 — IN PROGRESS**
+
+Tracking issue: **#6**
+
+Branch: `phase/02-design-tokens-theme`
+
+Execution plan: `docs/PHASE2_PLAN.md`
+
+Phase 2 is intentionally limited to the design-token and theme foundation that later Wening components will consume.
+
 ## Current allowed work
 
-Phase 2 may begin only after its tracking issue/branch is opened and the Phase 1 baseline is re-oriented.
+Phase 2A may now:
 
-- define and freeze semantic design tokens and theme architecture only.
+- audit the existing Tailwind/CSS baseline;
+- define token taxonomy and naming boundaries;
+- define the runtime theme contract for Light, Dark, and System;
+- define Tailwind-to-Wening semantic-variable integration;
+- define customization/brand-override boundaries;
+- define enforceable rules preventing hard-coded product color usage in Wening core;
+- update canonical documentation for accepted Phase 2 architecture.
 
+Specification/audit work for 2B–2E may proceed in parallel where it does not mutate shared implementation or bypass 2A decisions.
 
 ## Still NOT allowed
 
-Until Phase 2 is explicitly opened and scoped, do not:
+Until the relevant Phase 2 workstream is approved, do not:
 
-- implement Wening design tokens;
-- build reusable UI components;
-- build the sidebar/app shell;
+- build reusable Button/Input/Select/Badge/etc. component APIs;
+- build the sidebar/topbar/application shell;
 - build dashboards/tables/workflows;
-- copy/adapt implementation code from references;
-- begin packaging/release work.
+- implement the operational Gate screen;
+- build public/auth product surfaces;
+- introduce Bootstrap, shadcn/ui, Flux UI, or another runtime UI framework;
+- extract Wening into a package;
+- copy/adapt implementation code from references.
 
-A minimal framework bootstrap may be created during Phase 1 only when it is part of the approved engineering-baseline plan and exists to verify tooling/reproducibility—not to start product UI implementation.
+A bounded token/theme specimen page is allowed only as a verification surface. It must not become an accidental component library.
 
 ## Locked technical north star
 

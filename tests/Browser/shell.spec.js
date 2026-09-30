@@ -58,3 +58,41 @@ test('token specimen remains available as a separate verification route', async 
     expect(response.ok()).toBe(true);
     await expect(page.getByRole('heading', { level: 1, name: 'Design tokens, without the noise.' })).toBeVisible();
 });
+
+
+test('desktop sidebar collapse persists without changing server-owned current navigation', async ({ page }) => {
+    await page.setViewportSize({ width: 1366, height: 768 });
+    await page.goto('/');
+
+    const sidebar = page.getByTestId('desktop-sidebar');
+    const collapse = page.getByRole('button', { name: 'Collapse sidebar' });
+
+    await collapse.click();
+
+    await expect(page.locator('html')).toHaveAttribute('data-w-shell-sidebar', 'collapsed');
+
+    const expand = page.getByRole('button', { name: 'Expand sidebar' });
+
+    await expect(expand).toHaveAttribute('aria-expanded', 'false');
+    await expect.poll(async () => {
+        const box = await sidebar.boundingBox();
+
+        return box ? Math.round(box.width) : null;
+    }).toBe(72);
+
+    expect(await page.evaluate(() => window.localStorage.getItem('wening-shell-sidebar')))
+        .toBe('collapsed');
+
+    await expect(page.getByRole('link', { name: 'Overview' }))
+        .toHaveAttribute('aria-current', 'page');
+
+    await page.reload();
+
+    await expect(page.locator('html')).toHaveAttribute('data-w-shell-sidebar', 'collapsed');
+    await expect(page.getByRole('button', { name: 'Expand sidebar' })).toHaveAttribute('aria-expanded', 'false');
+    await expect.poll(async () => {
+        const box = await page.getByTestId('desktop-sidebar').boundingBox();
+
+        return box ? Math.round(box.width) : null;
+    }).toBe(72);
+});

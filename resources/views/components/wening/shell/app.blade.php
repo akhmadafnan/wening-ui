@@ -16,6 +16,7 @@
                 id="main-content"
                 class="min-w-0"
                 tabindex="-1"
+                data-w-shell-main
             >
                 {{ $slot }}
             </main>

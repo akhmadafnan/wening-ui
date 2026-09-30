@@ -2,8 +2,8 @@
 
 **Tracking issue:** #6
 **Branch:** `phase/02-design-tokens-theme`
-**Status:** IN PROGRESS
-**Active workstream:** 2G — Token Verification, Visual UAT & Closeout
+**Status:** CLOSED_GREEN
+**Active workstream:** NONE — PHASE 2 CLOSED_GREEN
 
 ## Objective
 
@@ -129,7 +129,7 @@ Responsibilities:
 
 ### Wave D — Verification & closeout
 
-**2G — Token Verification & Closeout — ACTIVE** — tracked by #12
+**2G — Token Verification & Closeout — CLOSED_GREEN** — tracked by #12
 
 Evidence:
 
@@ -275,6 +275,18 @@ Phase 2 closes only when:
 7. product-owner visual/design UAT passes;
 8. Phase 2 closeout is recorded;
 9. `docs/CURRENT_STATE.md` authorizes Phase 3 — Application Shell.
+
+## Closeout result
+
+Phase 2 is **CLOSED_GREEN**.
+
+Accepted evidence:
+
+- product-owner visual/design UAT: PASS;
+- final accepted implementation checkpoint: `b2838be4ce4e652e8c239cb2492c993c8d21ba29`;
+- final accepted implementation CI run: `36700975097`, six required jobs GREEN;
+- canonical closeout: `docs/PHASE2_CLOSEOUT.md`;
+- next allowed phase after merge: **PHASE 3 — Application Shell**.
 
 ## Stop conditions
 

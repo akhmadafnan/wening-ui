@@ -7,7 +7,7 @@
 **Phase 2 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
 **Implementation status:** TOKEN/THEME ARCHITECTURE ONLY — REUSABLE COMPONENT IMPLEMENTATION NOT YET STARTED
-**Active workstream:** PHASE 2B–2E — Parallel Domain Specification
+**Active workstream:** PHASE 2F — Theme Runtime & CSS/Tailwind Integration
 
 ## Phase 0 closeout
 
@@ -159,18 +159,31 @@ Frozen contracts:
 
 See `docs/TOKEN_ARCHITECTURE.md` and decisions D-058 through D-065.
 
+## Phase 2B–2E result
+
+**PHASE 2B–2E — SPEC_GREEN**
+
+Accepted domain specifications:
+
+- #7 / `docs/COLOR_THEME_SPEC.md`;
+- #8 / `docs/TYPOGRAPHY_DENSITY_SPEC.md`;
+- #9 / `docs/SPATIAL_SHAPE_SPEC.md`;
+- #10 / `docs/MOTION_FOCUS_SPEC.md`.
+
+These specifications are accepted for integrated implementation. Exact visual values remain subject to the combined Phase 2 product-owner UAT in 2G.
+
 ## Current allowed work
 
-Phase 2B–2E may now proceed in parallel specification lanes:
+Phase 2F (#11) may now:
 
-- #7 — 2B Color & Theme Semantics;
-- #8 — 2C Typography & Density;
-- #9 — 2D Spatial & Shape System;
-- #10 — 2E Motion, Focus & Interaction-State Tokens.
+- integrate the accepted token domains under `resources/css/wening`;
+- wire semantic Tailwind aliases;
+- implement Light/Dark/System theme runtime;
+- implement the `wening-theme` local preference contract;
+- provide a bounded raw-HTML token specimen for verification;
+- add focused architecture/browser/accessibility guards.
 
-These lanes may research/spec concurrently, but they must preserve the Phase 2A contract and must not independently mutate overlapping shared implementation files.
-
-Phase 2F (#11) remains blocked until 2B–2E specifications are integrated and accepted. Phase 2G (#12) remains blocked until 2F is complete.
+Phase 2G (#12) remains blocked until required 2F implementation evidence is GREEN.
 
 ## Still NOT allowed
 

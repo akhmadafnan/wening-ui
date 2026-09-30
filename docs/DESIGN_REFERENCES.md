@@ -94,6 +94,32 @@ Public reference: https://fluxui.dev/
 
 Flux may inform UX decisions but is not a Wening core dependency. Wening owns its component APIs and visual identity.
 
+## Reference F — Digdaya NU
+
+Public reference: https://digdaya.nu.id/
+
+### What Wening learns from it
+
+- institutional green brand confidence without turning every surface green;
+- public/product ecosystem composition with generous whitespace;
+- Sora-like display personality paired with highly readable functional text;
+- restrained product cards and clear category grouping;
+- branded split-screen authentication/entry composition;
+- light operational-admin shells with clear sidebar/topbar hierarchy;
+- green active/navigation states over predominantly neutral working surfaces;
+- practical KPI + table/form composition for administrative work.
+
+### What Wening does not copy
+
+- NU-specific branding, logos, illustrations, or product naming;
+- exact layouts, dimensions, navigation trees, or page structure;
+- proprietary assets or implementation details;
+- the assumption that every Wening host product must use green.
+
+### Boundary
+
+Digdaya is a **directional product/visual reference**. Wening keeps its own semantic-token architecture, component contracts, typography rules, accessibility requirements, and reusable branding boundary.
+
 ## Reference hierarchy
 
 When interpreting these sources:
@@ -112,4 +138,5 @@ The intended synthesis is:
 - **Tabler:** application completeness and mature behavior benchmark;
 - **shadcn/ui:** component anatomy, composability, and accessibility benchmark;
 - **Flux UI:** Livewire-oriented ergonomics benchmark;
+- **Digdaya NU:** institutional-green public ecosystem, branded entry, and operational-admin direction;
 - **Wening:** original implementation, semantics, branding flexibility, and agent-ready engineering discipline.

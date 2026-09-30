@@ -1,13 +1,13 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 1 — CLOSED_GREEN
+**Canonical phase:** PHASE 2 — CLOSED_GREEN
 **Phase 0 status:** CLOSED_GREEN  
-**Tracking issue:** #3  
+**Tracking issue:** #6
 **Phase 1 status:** CLOSED_GREEN
-**Next allowed phase:** PHASE 2 — Design Tokens & Theme Architecture
-**Previous phase:** PHASE 0 — CLOSED_GREEN  
-**Implementation status:** ENGINEERING BASELINE COMPLETE — PRODUCT UI IMPLEMENTATION NOT YET STARTED
-**Active workstream:** NONE — PHASE 2 NOT YET STARTED
+**Phase 2 status:** CLOSED_GREEN
+**Previous phase:** PHASE 1 — CLOSED_GREEN
+**Implementation status:** TOKEN/THEME FOUNDATION COMPLETE — APPLICATION SHELL NOT YET STARTED
+**Active workstream:** NONE — PHASE 3 NOT YET STARTED
 
 ## Phase 0 closeout
 
@@ -128,25 +128,124 @@ Product-owner UAT: **PASS**.
 
 Canonical closeout evidence is recorded in `docs/PHASE1_CLOSEOUT.md`.
 
-## Current allowed work
+## Phase 2 orientation
 
-Phase 2 may begin only after its tracking issue/branch is opened and the Phase 1 baseline is re-oriented.
+**PHASE 2 — CLOSED_GREEN**
 
-- define and freeze semantic design tokens and theme architecture only.
+Tracking issue: **#6**
 
+Branch: `phase/02-design-tokens-theme`
 
-## Still NOT allowed
+Execution plan: `docs/PHASE2_PLAN.md`
 
-Until Phase 2 is explicitly opened and scoped, do not:
+Phase 2 is intentionally limited to the design-token and theme foundation that later Wening components will consume.
 
-- implement Wening design tokens;
-- build reusable UI components;
-- build the sidebar/app shell;
-- build dashboards/tables/workflows;
-- copy/adapt implementation code from references;
-- begin packaging/release work.
+## Phase 2A result
 
-A minimal framework bootstrap may be created during Phase 1 only when it is part of the approved engineering-baseline plan and exists to verify tooling/reproducibility—not to start product UI implementation.
+**PHASE 2A — Token Architecture & Naming Contract: CLOSED_GREEN**
+
+Frozen contracts:
+
+- reference/primitive → semantic → component-consumption layering;
+- canonical `--w-*` runtime namespace;
+- Wening-prefixed Tailwind aliases mapped with CSS-first theme variables;
+- Tailwind default palette remains available to host apps while Wening core uses semantic tokens;
+- Light/Dark/System root theme contract through `data-w-theme`;
+- Light fallback/default; System follows `prefers-color-scheme`;
+- theme switching by semantic-variable remapping rather than duplicated per-component dark color classes;
+- brand-primary semantics are overridable without changing component structure;
+- hard-coded product colors/raw palette bypass is prohibited in normal Wening core;
+- local theme preference storage contract uses `wening-theme`.
+
+See `docs/TOKEN_ARCHITECTURE.md` and decisions D-058 through D-065.
+
+## Phase 2B–2E result
+
+**PHASE 2B–2E — SPEC_GREEN**
+
+Accepted domain specifications:
+
+- #7 / `docs/COLOR_THEME_SPEC.md`;
+- #8 / `docs/TYPOGRAPHY_DENSITY_SPEC.md`;
+- #9 / `docs/SPATIAL_SHAPE_SPEC.md`;
+- #10 / `docs/MOTION_FOCUS_SPEC.md`.
+
+These specifications are accepted for integrated implementation. Exact visual values remain subject to the combined Phase 2 product-owner UAT in 2G.
+
+## Phase 2F result
+
+**PHASE 2F — IMPLEMENTATION_GREEN**
+
+Integrated implementation is complete under `resources/css/wening` plus the bounded theme runtime/specimen harness.
+
+Verified checkpoint:
+
+- commit: `be049da4c767208d7da6b153f386e7a49b93bf69`;
+- GitHub Actions run: `36691878437`;
+- PHP Quality — GREEN;
+- PHP Tests (8.3) — GREEN;
+- PHP Tests (8.4) — GREEN;
+- PHP Tests (8.5) — GREEN;
+- Frontend — GREEN;
+- Browser / Chromium — GREEN.
+
+Corrective evidence included semantic-token guard hardening, axe-driven Light subtle-text contrast correction, and browser-independent reduced-motion assertion.
+
+## Product-owner typography refinement
+
+Typography direction is now LOCKED through D-066…D-068:
+
+- Sora = selective display/brand personality;
+- Inter = primary UI/reading workhorse;
+- frontend/public = Sora + Inter;
+- backend/application = Inter-dominant with selective Sora;
+- monospace = technical metadata only;
+- system-ui = fallback, not canonical identity;
+- no required remote font CDN.
+
+## Product-owner visual-direction refinement
+
+Reference direction is now LOCKED through D-069…D-073:
+
+- default Wening reference primary = institutional green;
+- semantic primary remains brand-overridable;
+- Digdaya NU is an additional reference, never a cloning/dependency target;
+- public/frontend = institutional ecosystem product UI;
+- backend/application = operational admin clarity;
+- auth/entry may use restrained split branded composition;
+- previous information-first, no-card-everywhere, Light/Dark/System, density, accessibility, and originality decisions remain unchanged.
+- canonical direction document: `docs/DESIGN_DIRECTION.md`.
+
+## Phase 2G result
+
+**PHASE 2G — CLOSED_GREEN**
+
+Product-owner visual/design UAT: **PASS**.
+
+Final accepted implementation checkpoint:
+
+- commit: `b2838be4ce4e652e8c239cb2492c993c8d21ba29`;
+- GitHub Actions run: `36700975097`;
+- all six required CI jobs GREEN.
+
+Canonical closeout: `docs/PHASE2_CLOSEOUT.md`.
+
+## Next allowed work
+
+**PHASE 3 — Application Shell**
+
+Phase 3 may begin only after Phase 2 is merged to `main` and a dedicated tracking issue/branch is opened.
+
+Until Phase 3 is explicitly opened and scoped, do not:
+
+- implement application-shell production code;
+- build reusable core primitives beyond what the shell strictly needs for bounded verification;
+- build data-table/workflow/operational/public production surfaces;
+- introduce new UI runtime dependencies;
+- bypass Phase 0–2 design/token decisions;
+- copy implementation code from references.
+
+Phase 3 should establish desktop/mobile shell structure, sidebar/topbar/content frame, navigation behavior, responsive collapse, and keyboard/focus baseline while preserving later-phase boundaries.
 
 ## Locked technical north star
 
@@ -181,6 +280,6 @@ Phase 1 closes only when:
 8. product owner accepts the engineering baseline;
 9. `CURRENT_STATE.md` points to Phase 2 as the next allowed phase.
 
-## Next expected phase after Phase 1
+## Next expected phase
 
-**PHASE 2 — Design Tokens & Theme Architecture**
+**PHASE 3 — Application Shell**

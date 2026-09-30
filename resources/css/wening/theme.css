@@ -1,0 +1,28 @@
+@import './tokens.css';
+@import './theme-light.css';
+@import './theme-dark.css';
+
+@layer base {
+    html {
+        background: var(--w-color-page);
+        color: var(--w-color-fg);
+        font-family: var(--w-font-sans);
+        text-rendering: optimizeLegibility;
+    }
+
+    body {
+        min-height: 100vh;
+        background: var(--w-color-page);
+        color: var(--w-color-fg);
+    }
+
+    ::selection {
+        background: var(--w-color-selection);
+        color: var(--w-color-fg);
+    }
+
+    :focus-visible {
+        outline: var(--w-focus-width) var(--w-focus-style) var(--w-color-focus-ring);
+        outline-offset: var(--w-focus-offset);
+    }
+}

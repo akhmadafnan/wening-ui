@@ -1,0 +1,73 @@
+:root,
+[data-w-theme="light"],
+[data-w-theme="system"] {
+    --w-color-page: var(--w-ref-neutral-50);
+    --w-color-surface: var(--w-ref-neutral-0);
+    --w-color-surface-subtle: var(--w-ref-neutral-100);
+    --w-color-surface-elevated: var(--w-ref-neutral-0);
+
+    --w-color-fg: var(--w-ref-neutral-900);
+    --w-color-fg-muted: var(--w-ref-neutral-600);
+    --w-color-fg-subtle: var(--w-ref-neutral-550);
+    --w-color-fg-inverse: var(--w-ref-neutral-0);
+
+    --w-color-border: var(--w-ref-neutral-200);
+    --w-color-border-strong: var(--w-ref-neutral-500);
+
+    --w-color-primary: var(--w-ref-brand-600);
+    --w-color-primary-hover: var(--w-ref-brand-700);
+    --w-color-primary-active: var(--w-ref-brand-800);
+    --w-color-primary-fg: var(--w-ref-neutral-0);
+    --w-color-primary-soft: var(--w-ref-brand-50);
+    --w-color-primary-soft-fg: var(--w-ref-brand-700);
+    --w-color-primary-border: var(--w-ref-brand-200);
+
+    --w-color-success: #17824b;
+    --w-color-success-fg: #ffffff;
+    --w-color-success-soft: #ecf9f1;
+    --w-color-success-soft-fg: #157743;
+    --w-color-success-border: #b7e3c7;
+
+    --w-color-warning: #9a6700;
+    --w-color-warning-fg: #ffffff;
+    --w-color-warning-soft: #fff7e0;
+    --w-color-warning-soft-fg: #8a5d00;
+    --w-color-warning-border: #ebcf83;
+
+    --w-color-danger: #c5393f;
+    --w-color-danger-fg: #ffffff;
+    --w-color-danger-soft: #fff0f0;
+    --w-color-danger-soft-fg: #b83238;
+    --w-color-danger-border: #f0b7ba;
+
+    --w-color-info: #2563b9;
+    --w-color-info-fg: #ffffff;
+    --w-color-info-soft: #eef5ff;
+    --w-color-info-soft-fg: #1f579f;
+    --w-color-info-border: #b8d4fa;
+
+    --w-color-link: var(--w-ref-brand-700);
+    --w-color-focus-ring: var(--w-ref-brand-700);
+    --w-color-selection: var(--w-ref-brand-100);
+
+    --w-color-disabled-bg: var(--w-ref-neutral-100);
+    --w-color-disabled-fg: var(--w-ref-neutral-400);
+    --w-color-disabled-border: var(--w-ref-neutral-300);
+
+    --w-shadow-none: none;
+    --w-shadow-raised:
+        0 1px 2px rgb(15 23 42 / 0.06),
+        0 1px 3px rgb(15 23 42 / 0.04);
+    --w-shadow-overlay:
+        0 12px 32px rgb(15 23 42 / 0.16),
+        0 2px 8px rgb(15 23 42 / 0.08);
+}
+
+:root,
+[data-w-theme="light"] {
+    color-scheme: light;
+}
+
+[data-w-theme="system"] {
+    color-scheme: light dark;
+}

@@ -107,6 +107,14 @@ Public pages can use more whitespace and editorial composition. Application page
 
 They should still feel like one product through typography, color semantics, controls, radius, iconography, and interaction behavior.
 
+Wening's reference direction distinguishes the emphasis without splitting the product identity:
+
+- public/frontend: Sora-led display moments, Inter functional text, bright institutional ecosystem composition, restrained green identity;
+- backend/application: Inter-dominant operational typography, neutral work surfaces, green active/primary states, tables/forms/filters first;
+- auth/entry: branded composition may be stronger, while the actual form remains focused and quiet.
+
+The shared semantic-token system—not copied page layouts—keeps these surfaces coherent.
+
 ## 15. Consistency beats novelty
 
 A component that behaves consistently across twenty screens is more valuable than twenty individually “creative” screens.

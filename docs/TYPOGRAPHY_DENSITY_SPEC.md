@@ -2,13 +2,45 @@
 
 **Phase:** 2C
 **Tracking issue:** #8
-**Status:** SPEC_READY
+**Status:** SPEC_GREEN
 
 ## Objective
 
 Freeze a highly legible typography system and a deliberate comfortable/compact density model suitable for institutional, data-heavy, and operational applications.
 
 ## Font-family contract
+
+Wening uses three typography roles:
+
+```text
+display / brand  → Sora
+UI / reading     → Inter
+technical        → Geist Mono / system monospace fallback
+```
+
+These are roles, not three equally dominant visual voices.
+
+### Display / brand
+
+```css
+--w-font-display:
+    Sora,
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+```
+
+**Sora** provides controlled personality for high-emphasis product-facing typography.
+
+Use it selectively for:
+
+- public/frontend hero headings;
+- major public section headings;
+- strong product/brand statements;
+- selected major metrics or application identity moments.
+
+Do not use Sora mechanically for every heading, card title, form label, table header, or navigation item.
 
 ### Primary UI sans
 
@@ -23,13 +55,56 @@ Freeze a highly legible typography system and a deliberate comfortable/compact d
     sans-serif;
 ```
 
-**Inter** is Wening's preferred UI face because of its neutral, work-oriented legibility and broad weight coverage.
+**Inter** is Wening's default workhorse font because of its neutral, work-oriented legibility and broad weight coverage.
 
-Wening core does not require a remote font CDN.
+Inter owns:
 
-If an integrating application does not provide Inter, the system fallback remains valid.
+- body and long-form UI reading;
+- navigation;
+- buttons/actions;
+- form labels and inputs;
+- tables and dense data;
+- filters/toolbars;
+- badges/status text;
+- modal/dialog copy;
+- most backend/admin typography.
 
-Font asset packaging is intentionally separate from the semantic typography contract and may be refined during packaging/release work.
+### Frontend/public usage
+
+The default public-facing direction is **Sora + Inter**:
+
+- Sora supplies identity and hierarchy;
+- Inter supplies reading comfort and functional UI consistency.
+
+This avoids a generic system-font public surface without turning the entire frontend into display typography.
+
+### Backend/application usage
+
+The default backend/application direction is **Inter-dominant**.
+
+Sora may appear only as a restrained accent for:
+
+- application/product identity;
+- selected page titles;
+- selected major KPI/metric values where visual hierarchy benefits.
+
+Backend controls, tables, forms, filters, navigation, dense metadata, and workflow text remain Inter by default.
+
+The intended distribution is conceptually **mostly Inter with selective Sora**, not a 50/50 mixture.
+
+### System-font boundary
+
+`system-ui` is a fallback, not Wening's canonical visual identity.
+
+Using `system-ui` as the primary family would produce materially different typography across Windows, macOS, Android, and Linux. Wening therefore keeps explicit preferred faces first while retaining resilient system fallbacks.
+
+### Font delivery
+
+Wening core does **not** require a remote font CDN.
+
+The semantic font contract is independent from delivery. Reference-app self-hosting or package-based font delivery may be added deliberately, but failure to load a preferred face must degrade cleanly to the declared fallbacks.
+
+Font asset packaging remains separate from the token contract and may be refined during packaging/release work.
 
 ### Technical monospace
 
@@ -87,17 +162,21 @@ Avoid routine use of bold for ordinary hierarchy. Whitespace, size, and placemen
 
 Recommended role mapping:
 
-- page title: 24/32, 600;
-- section heading: 20/28, 600;
+- public hero title: 32–40px, 600–700, display role;
+- public section heading: 20–32px, 600, display role when identity benefits;
+- backend page title: 24/32, 600, sans by default; display is optional and selective;
+- section heading: 20/28, 600, sans by default;
 - subheading: 16/24, 600;
 - body: 14/22, 400;
 - secondary body: 13/20, 400;
 - label/action: 13–14px, 500;
 - caption/technical meta: 12/16, 400–500;
-- large metric: 32/40, 600;
+- large metric: 32/40, 600, display optional;
 - compact metric: 24/32, 600.
 
 These are semantic conventions, not reusable components.
+
+Typography hierarchy should come first from size, weight, whitespace, and placement. Font-family switching is an accent tool, not the primary hierarchy mechanism.
 
 ## Letter spacing
 

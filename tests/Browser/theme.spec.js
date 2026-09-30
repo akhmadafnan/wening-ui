@@ -107,7 +107,7 @@ test('reduced motion collapses Wening transition duration tokens', async ({ page
         getComputedStyle(element).getPropertyValue('--w-motion-normal').trim()
     ));
 
-    expect(duration).toBe('0ms');
+    expect(Number.parseFloat(duration)).toBe(0);
 });
 
 test('keyboard focus receives the Wening focus treatment', async ({ page }) => {

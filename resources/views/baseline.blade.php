@@ -32,7 +32,7 @@
             <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div class="max-w-2xl">
                     <p class="text-w-sm font-medium text-w-primary">Wening UI · Phase 2</p>
-                    <h1 class="mt-2 text-w-3xl font-semibold tracking-tight">
+                    <h1 class="mt-2 font-w-display text-w-3xl font-semibold tracking-tight">
                         Design tokens, without the noise.
                     </h1>
                     <p class="mt-3 max-w-xl text-w-md text-w-fg-muted">
@@ -95,7 +95,7 @@
                 ] as [$label, $value])
                     <div>
                         <dt class="text-w-sm text-w-fg-muted">{{ $label }}</dt>
-                        <dd class="mt-1 text-w-3xl font-semibold tabular-nums tracking-tight">{{ $value }}</dd>
+                        <dd class="mt-1 font-w-display text-w-3xl font-semibold tabular-nums tracking-tight">{{ $value }}</dd>
                     </div>
                 @endforeach
             </dl>
@@ -154,13 +154,13 @@
 
         <section class="border-t border-w-border py-9" aria-labelledby="type-heading">
             <h2 id="type-heading" class="text-w-xl font-semibold">Typography scale</h2>
-            <p class="mt-1 text-w-sm text-w-fg-muted">Inter-first UI stack, selective monospace for technical metadata.</p>
+            <p class="mt-1 text-w-sm text-w-fg-muted">Sora for selective display identity, Inter for primary UI/readability, and monospace only for technical metadata.</p>
 
             <div class="mt-6 grid gap-5 lg:grid-cols-[1fr_18rem]">
                 <div class="space-y-4">
-                    <p class="text-w-4xl font-semibold tracking-tight">40 / 48 — exceptional display</p>
-                    <p class="text-w-3xl font-semibold tracking-tight">32 / 40 — major metric</p>
-                    <p class="text-w-2xl font-semibold">24 / 32 — page title</p>
+                    <p class="font-w-display text-w-4xl font-semibold tracking-tight">40 / 48 — Sora display role</p>
+                    <p class="font-w-display text-w-3xl font-semibold tracking-tight">32 / 40 — selected display/metric</p>
+                    <p class="text-w-2xl font-semibold">24 / 32 — Inter application title</p>
                     <p class="text-w-xl font-semibold">20 / 28 — section heading</p>
                     <p class="text-w-lg font-medium">16 / 24 — emphasized body</p>
                     <p class="text-w-md">14 / 22 — default application body</p>

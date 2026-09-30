@@ -8,7 +8,7 @@
 **Phase 3 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
 **Implementation status:** APPLICATION SHELL IN PROGRESS — CORE PRIMITIVES/DATA/WORKFLOW NOT YET STARTED
-**Active workstream:** PHASE 3B — Desktop Application Shell
+**Active workstream:** PHASE 3C — Shell Navigation & Local State
 
 ## Phase 0 closeout
 
@@ -270,18 +270,39 @@ Tracking lanes:
 - #22 — 3F Shell Accessibility & Keyboard Baseline;
 - #23 — 3G Visual UAT & Closeout.
 
+## Phase 3B result
+
+**PHASE 3B — DESKTOP_SHELL_GREEN**
+
+Verified checkpoint:
+
+- commit: `74c5837674c35de0961b09ffaef8565227c25f9a`;
+- GitHub Actions run: `36703863269`;
+- all six required jobs GREEN.
+
+Delivered:
+
+- shell-specific Blade frame;
+- 256px desktop sidebar;
+- 64px topbar;
+- page header/content frame;
+- grouped navigation/current-page semantics;
+- shell-domain tokens;
+- root shell specimen;
+- Phase 2 token specimen retained at `/tokens`.
+
 ## Current allowed work
 
-Phase 3B (#18) may now:
+Phase 3C (#19) may now:
 
-- implement shell-specific Blade structure;
-- implement expanded desktop sidebar baseline;
-- implement topbar and page-header/content frame;
-- implement grouped navigation and server-owned current state;
-- consume Phase 2 semantic tokens only;
-- provide representative shell specimen content without becoming a dashboard.
+- implement desktop expanded/collapsed shell state;
+- persist desktop preference under `wening-shell-sidebar`;
+- preserve server-owned current-route state;
+- reuse existing theme/density runtime contracts;
+- add focused browser tests for state persistence and geometry;
+- keep local shell state out of Livewire.
 
-3C–3F remain bounded follow-on lanes. 3G remains blocked until implementation/accessibility evidence is ready.
+3D–3F remain bounded follow-on lanes. 3G remains blocked until implementation/accessibility evidence is ready.
 
 ## Still NOT allowed
 

@@ -1,13 +1,13 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 2 — Design Tokens & Theme Architecture
+**Canonical phase:** PHASE 2 — CLOSED_GREEN
 **Phase 0 status:** CLOSED_GREEN  
 **Tracking issue:** #6
 **Phase 1 status:** CLOSED_GREEN
-**Phase 2 status:** IN PROGRESS
+**Phase 2 status:** CLOSED_GREEN
 **Previous phase:** PHASE 1 — CLOSED_GREEN
-**Implementation status:** TOKEN/THEME ARCHITECTURE ONLY — REUSABLE COMPONENT IMPLEMENTATION NOT YET STARTED
-**Active workstream:** PHASE 2G — Token Verification, Visual UAT & Closeout
+**Implementation status:** TOKEN/THEME FOUNDATION COMPLETE — APPLICATION SHELL NOT YET STARTED
+**Active workstream:** NONE — PHASE 3 NOT YET STARTED
 
 ## Phase 0 closeout
 
@@ -130,7 +130,7 @@ Canonical closeout evidence is recorded in `docs/PHASE1_CLOSEOUT.md`.
 
 ## Phase 2 orientation
 
-**PHASE 2 — IN PROGRESS**
+**PHASE 2 — CLOSED_GREEN**
 
 Tracking issue: **#6**
 
@@ -216,31 +216,36 @@ Reference direction is now LOCKED through D-069…D-073:
 - previous information-first, no-card-everywhere, Light/Dark/System, density, accessibility, and originality decisions remain unchanged.
 - canonical direction document: `docs/DESIGN_DIRECTION.md`.
 
-## Current allowed work
+## Phase 2G result
 
-Phase 2G (#12) may now:
+**PHASE 2G — CLOSED_GREEN**
 
-- perform final local/cross-browser regression where relevant;
-- perform product-owner visual UAT of Light/Dark/System;
-- perform product-owner visual UAT of Comfortable/Compact density;
-- verify semantic hierarchy, typography, status colors, focus visibility, and restrained elevation;
-- record closeout evidence;
-- authorize Phase 3 only after explicit product-owner acceptance.
+Product-owner visual/design UAT: **PASS**.
 
-## Still NOT allowed
+Final accepted implementation checkpoint:
 
-Until the relevant Phase 2 workstream is approved, do not:
+- commit: `b2838be4ce4e652e8c239cb2492c993c8d21ba29`;
+- GitHub Actions run: `36700975097`;
+- all six required CI jobs GREEN.
 
-- build reusable Button/Input/Select/Badge/etc. component APIs;
-- build the sidebar/topbar/application shell;
-- build dashboards/tables/workflows;
-- implement the operational Gate screen;
-- build public/auth product surfaces;
-- introduce Bootstrap, shadcn/ui, Flux UI, or another runtime UI framework;
-- extract Wening into a package;
-- copy/adapt implementation code from references.
+Canonical closeout: `docs/PHASE2_CLOSEOUT.md`.
 
-A bounded token/theme specimen page is allowed only as a verification surface. It must not become an accidental component library.
+## Next allowed work
+
+**PHASE 3 — Application Shell**
+
+Phase 3 may begin only after Phase 2 is merged to `main` and a dedicated tracking issue/branch is opened.
+
+Until Phase 3 is explicitly opened and scoped, do not:
+
+- implement application-shell production code;
+- build reusable core primitives beyond what the shell strictly needs for bounded verification;
+- build data-table/workflow/operational/public production surfaces;
+- introduce new UI runtime dependencies;
+- bypass Phase 0–2 design/token decisions;
+- copy implementation code from references.
+
+Phase 3 should establish desktop/mobile shell structure, sidebar/topbar/content frame, navigation behavior, responsive collapse, and keyboard/focus baseline while preserving later-phase boundaries.
 
 ## Locked technical north star
 
@@ -275,6 +280,6 @@ Phase 1 closes only when:
 8. product owner accepts the engineering baseline;
 9. `CURRENT_STATE.md` points to Phase 2 as the next allowed phase.
 
-## Next expected phase after Phase 1
+## Next expected phase
 
-**PHASE 2 — Design Tokens & Theme Architecture**
+**PHASE 3 — Application Shell**

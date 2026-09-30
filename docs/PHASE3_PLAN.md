@@ -3,7 +3,7 @@
 **Tracking issue:** #14
 **Branch:** `phase/03-application-shell`
 **Status:** IN PROGRESS
-**Active workstream:** 3B — Desktop Application Shell
+**Active workstream:** 3C — Shell Navigation & Local State
 
 ## Objective
 
@@ -52,7 +52,7 @@ Exit:
 
 ### Wave B — Static shell structure
 
-**3B — Desktop Shell — ACTIVE** — tracked by #18
+**3B — Desktop Shell — CLOSED_GREEN** — tracked by #18
 
 Implement:
 
@@ -69,7 +69,7 @@ This lane may use static/default state first.
 
 ### Wave C — Behavior and responsive shell
 
-**3C — Shell Navigation & Local State** — tracked by #19
+**3C — Shell Navigation & Local State — ACTIVE** — tracked by #19
 
 Implement:
 

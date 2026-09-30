@@ -214,6 +214,7 @@ Reference direction is now LOCKED through D-069…D-073:
 - backend/application = operational admin clarity;
 - auth/entry may use restrained split branded composition;
 - previous information-first, no-card-everywhere, Light/Dark/System, density, accessibility, and originality decisions remain unchanged.
+- canonical direction document: `docs/DESIGN_DIRECTION.md`.
 
 ## Current allowed work
 

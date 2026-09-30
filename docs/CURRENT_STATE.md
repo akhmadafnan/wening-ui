@@ -5,7 +5,7 @@
 **Tracking issue:** #3  
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
 **Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1F — Minimal Engineering Bootstrap & Proof
+**Active workstream:** PHASE 1G — Phase 1 Closeout
 
 ## Phase 0 closeout
 
@@ -112,21 +112,21 @@ Frozen CI/governance:
 
 See `docs/CI_GOVERNANCE.md`.
 
+## Phase 1F result
+
+**PHASE 1F — Minimal Engineering Bootstrap & Proof: CLOSED_GREEN**
+
+Implementation and CI evidence are recorded in `docs/PHASE1F_CLOSEOUT.md`.
+
 ## Current allowed work
 
-Phase 1F may now:
+Phase 1G may now:
 
-- audit current stable runtime/framework versions;
-- choose exact supported versions;
-- decide minimal bootstrap/starter strategy;
-- define repository topology;
-- establish local development commands;
-- establish formatter/lint/static-analysis policy;
-- establish unit/feature/component/browser testing baseline;
-- establish accessibility and visual-regression tooling;
-- establish dependency/update policy;
-- establish CI and required evidence;
-- establish GitHub branch/PR protection strategy.
+- synchronize final canonical documentation;
+- verify final Git and CI evidence;
+- review the complete Phase 1 pull request diff;
+- perform product-owner engineering-baseline UAT;
+- close Phase 1 and authorize Phase 2 only after explicit acceptance.
 
 ## Still NOT allowed
 

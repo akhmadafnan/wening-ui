@@ -17,10 +17,10 @@ Phase 1 is intentionally split into bounded workstreams:
 3. **1C — Quality Toolchain — CLOSED_GREEN**
 4. **1D — Browser, Accessibility & Visual Evidence — CLOSED_GREEN**
 5. **1E — CI & GitHub Governance — CLOSED_GREEN**
-6. **1F — Minimal Engineering Bootstrap & Proof**
-7. **1G — Phase 1 Closeout**
+6. **1F — Minimal Engineering Bootstrap & Proof — CLOSED_GREEN**
+7. **1G — Phase 1 Closeout — ACTIVE**
 
-Do not jump to 1F merely because framework installation is easy. Decisions and evidence must precede implementation.
+Phase 1F was executed only after 1A–1E were frozen. Phase 1G is documentation, UAT, and governance closeout only.
 
 ## 1A — Runtime & Version Freeze
 
@@ -164,19 +164,19 @@ Frozen baseline:
 - Dependabot for Composer/npm/Actions;
 - CI is non-mutating: no source fixes, snapshot acceptance, or lockfile updates.
 
-Phase 1F is the next allowed workstream.
+Phase 1F is CLOSED_GREEN; Phase 1G is the active workstream.
 
-## 1F — Minimal Engineering Bootstrap
+## 1F — Minimal Engineering Bootstrap — CLOSED_GREEN
 
-Only after the preceding decisions are documented:
+Implemented result:
 
-- create the minimal Laravel reference app baseline;
-- install the approved Livewire/Tailwind integration;
-- prove build and tests;
-- add no Wening product UI beyond a minimal technical smoke surface if necessary;
-- record canonical commands.
+- created the minimal Laravel reference app baseline;
+- installed the approved Livewire/Tailwind integration;
+- proved build and tests locally and in GitHub Actions;
+- added no Wening product UI beyond the minimal technical smoke surface;
+- recorded canonical commands and CI evidence.
 
-## 1G — Closeout
+## 1G — Closeout — ACTIVE
 
 Phase 1 closes only after:
 

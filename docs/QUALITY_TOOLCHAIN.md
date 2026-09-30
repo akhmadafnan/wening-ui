@@ -121,9 +121,10 @@ Not every design principle can be statically tested. Human UAT remains required 
 
 ## Laravel PAO — agentic harness
 
-Laravel 13's current application skeleton includes `laravel/pao` as a dev dependency.
+Wening explicitly carries `laravel/pao:^1.0.6` as a development dependency.
 
 PAO is intentionally retained.
+This requirement remains explicit even when a generated Laravel application skeleton omits PAO.
 
 It detects supported AI-agent environments and transforms verbose PHPUnit/Pest/PHPStan/Artisan output into compact structured output while leaving normal human terminal output unchanged.
 
@@ -168,7 +169,7 @@ It may be introduced later for explicit refactoring/migration tasks, but CI will
 
 ## Canonical quality command model
 
-The actual Composer scripts are implemented in Phase 1F, but the intended responsibilities are:
+Phase 1F implements the following canonical Composer script responsibilities:
 
 ```text
 format:check  → Pint --test

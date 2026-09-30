@@ -1,6 +1,6 @@
-# PHASE 1F — Local Bootstrap Runbook (Windows PowerShell)
+# PHASE 1F — Local Bootstrap Runbook (Windows)
 
-**Status:** READY_FOR_EXECUTION  
+**Status:** CLOSED_GREEN
 **Branch:** `phase/01-engineering-baseline`
 
 Phase 1F is the first workstream that creates executable application files. It must remain an engineering bootstrap only; do not implement Wening design tokens/components yet.
@@ -119,7 +119,7 @@ Important:
 Initialize Pest:
 
 ```powershell
-php artisan pest:install
+./vendor/bin/pest --init
 ```
 
 If that command is unavailable, **STOP** and report the exact error rather than improvising another test architecture.

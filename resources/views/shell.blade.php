@@ -3,6 +3,7 @@
     lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     data-w-theme="light"
     data-w-density="comfortable"
+    data-w-shell-sidebar="expanded"
 >
 <head>
     <meta charset="utf-8">
@@ -14,12 +15,18 @@
     <script>
         (() => {
             try {
-                const value = window.localStorage.getItem('wening-theme');
-                document.documentElement.dataset.wTheme = ['light', 'dark', 'system'].includes(value)
-                    ? value
+                const theme = window.localStorage.getItem('wening-theme');
+                document.documentElement.dataset.wTheme = ['light', 'dark', 'system'].includes(theme)
+                    ? theme
                     : 'light';
+
+                const sidebar = window.localStorage.getItem('wening-shell-sidebar');
+                document.documentElement.dataset.wShellSidebar = ['expanded', 'collapsed'].includes(sidebar)
+                    ? sidebar
+                    : 'expanded';
             } catch {
                 document.documentElement.dataset.wTheme = 'light';
+                document.documentElement.dataset.wShellSidebar = 'expanded';
             }
         })();
     </script>
@@ -102,14 +109,14 @@
                 </x-wening.shell.sidebar-section>
 
                 <x-slot:footer>
-                    <div class="flex items-center gap-3 rounded-w-md px-2 py-2">
+                    <div class="flex items-center gap-3 rounded-w-md px-2 py-2" data-w-shell-footer-row>
                         <div
                             class="flex size-9 shrink-0 items-center justify-center rounded-full bg-w-primary-soft text-w-sm font-semibold text-w-primary-soft-fg"
                             aria-hidden="true"
                         >
                             AU
                         </div>
-                        <div class="min-w-0">
+                        <div class="min-w-0" data-w-shell-expanded-only>
                             <p class="truncate text-w-sm font-medium text-w-fg">Application User</p>
                             <p class="truncate text-w-xs text-w-fg-muted">Administrator</p>
                         </div>

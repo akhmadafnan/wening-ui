@@ -2,7 +2,7 @@
 
 **Phase:** 2B
 **Tracking issue:** #7
-**Status:** SPEC_READY
+**Status:** SPEC_GREEN
 
 ## Objective
 
@@ -23,9 +23,9 @@ Disabled/inactive controls are treated separately by WCAG, but Wening still keep
 
 ## Reference color direction
 
-The reference identity is a restrained blue-indigo accent over neutral Light surfaces and blue-black Dark surfaces.
+The reference identity is a restrained institutional green accent over neutral Light surfaces and blue-black Dark surfaces.
 
-This is a default Wening identity, not a mandatory product brand.
+This is Wening's default reference identity, not a mandatory product brand. The architecture remains brand-overridable through semantic tokens.
 
 ## Light semantic values
 
@@ -41,16 +41,16 @@ This is a default Wening identity, not a mandatory product brand.
 | `--w-color-fg-inverse` | `#FFFFFF` | text on dark/strong fills |
 | `--w-color-border` | `#E5E7EB` | decorative separators |
 | `--w-color-border-strong` | `#868E98` | identifiable control boundary |
-| `--w-color-primary` | `#5360D6` | primary action/accent |
-| `--w-color-primary-hover` | `#4650BA` | primary hover |
-| `--w-color-primary-active` | `#394496` | primary active |
+| `--w-color-primary` | `#0F7A45` | primary action/accent |
+| `--w-color-primary-hover` | `#0C6A3B` | primary hover |
+| `--w-color-primary-active` | `#095C33` | primary active |
 | `--w-color-primary-fg` | `#FFFFFF` | foreground on primary |
-| `--w-color-primary-soft` | `#F1F3FF` | subtle primary surface |
-| `--w-color-primary-soft-fg` | `#4650BA` | foreground on soft primary |
-| `--w-color-primary-border` | `#C8CEFF` | primary-tinted border |
-| `--w-color-link` | `#4650BA` | link foreground |
-| `--w-color-focus-ring` | `#4650BA` | keyboard focus ring |
-| `--w-color-selection` | `#E2E6FF` | text/selection background |
+| `--w-color-primary-soft` | `#EFFAF4` | subtle primary surface |
+| `--w-color-primary-soft-fg` | `#0C6A3B` | foreground on soft primary |
+| `--w-color-primary-border` | `#BCE8D0` | primary-tinted border |
+| `--w-color-link` | `#0C6A3B` | link foreground |
+| `--w-color-focus-ring` | `#0C6A3B` | keyboard focus ring |
+| `--w-color-selection` | `#DDF5E8` | text/selection background |
 | `--w-color-disabled-bg` | `#F0F2F5` | disabled surface |
 | `--w-color-disabled-fg` | `#9AA1AB` | disabled text/icon |
 | `--w-color-disabled-border` | `#D1D5DB` | disabled border |
@@ -69,16 +69,16 @@ This is a default Wening identity, not a mandatory product brand.
 | `--w-color-fg-inverse` | `#0A0E1A` | foreground on light/strong fills |
 | `--w-color-border` | `#24304A` | decorative separators |
 | `--w-color-border-strong` | `#586587` | identifiable control boundary |
-| `--w-color-primary` | `#858EFA` | primary action/accent |
-| `--w-color-primary-hover` | `#A0A7FF` | primary hover |
-| `--w-color-primary-active` | `#B7BDFF` | primary active |
+| `--w-color-primary` | `#66C493` | primary action/accent |
+| `--w-color-primary-hover` | `#7CCDA3` | primary hover |
+| `--w-color-primary-active` | `#93D8B5` | primary active |
 | `--w-color-primary-fg` | `#0A0E1A` | foreground on primary |
-| `--w-color-primary-soft` | `#1E2747` | subtle primary surface |
-| `--w-color-primary-soft-fg` | `#A6AEFF` | foreground on soft primary |
-| `--w-color-primary-border` | `#46538A` | primary-tinted border |
-| `--w-color-link` | `#A6AEFF` | link foreground |
-| `--w-color-focus-ring` | `#A6AEFF` | keyboard focus ring |
-| `--w-color-selection` | `#29355C` | text/selection background |
+| `--w-color-primary-soft` | `#143124` | subtle primary surface |
+| `--w-color-primary-soft-fg` | `#93D8B5` | foreground on soft primary |
+| `--w-color-primary-border` | `#2D684A` | primary-tinted border |
+| `--w-color-link` | `#93D8B5` | link foreground |
+| `--w-color-focus-ring` | `#93D8B5` | keyboard focus ring |
+| `--w-color-selection` | `#1F4A35` | text/selection background |
 | `--w-color-disabled-bg` | `#151D32` | disabled surface |
 | `--w-color-disabled-fg` | `#647087` | disabled text/icon |
 | `--w-color-disabled-border` | `#24304A` | disabled border |
@@ -121,17 +121,28 @@ Representative pairs calculated against WCAG relative luminance:
 | Light muted / page | 5.89:1 |
 | Light subtle / page | 4.78:1 |
 | Light subtle / subtle surface | 4.53:1 |
-| Light primary / primary fg | 5.23:1 |
-| Light primary soft fg / soft | 6.10:1 |
+| Light primary / primary fg | 5.40:1 |
+| Light primary soft fg / soft | 6.26:1 |
 | Light strong control border / page | 3.12:1 |
 | Dark fg / page | 15.97:1 |
 | Dark muted / surface | 8.37:1 |
 | Dark subtle / surface | 5.86:1 |
-| Dark primary / primary fg | 6.64:1 |
-| Dark primary soft fg / soft | 7.05:1 |
+| Dark primary / primary fg | 9.06:1 |
+| Dark primary soft fg / soft | 8.52:1 |
 | Dark strong control border / surface | 3.05:1 |
 
 All strong status foreground pairs exceed 4.5:1 in the reference mapping.
+
+## Primary-green meaning
+
+Wening's reference primary is intentionally green because the product-owner direction favors an institutional green identity for public and application surfaces.
+
+Primary green and semantic success are **not interchangeable meanings**:
+
+- primary = brand/action/navigation emphasis;
+- success = positive completion/verified state.
+
+Future components must preserve this semantic distinction through labels, icons, placement, and state behavior rather than relying on hue alone.
 
 ## Border rule
 

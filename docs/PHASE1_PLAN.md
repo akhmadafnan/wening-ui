@@ -2,7 +2,7 @@
 
 **Tracking issue:** #3  
 **Branch:** `phase/01-engineering-baseline`  
-**Status:** IN PROGRESS
+**Status:** CLOSED_GREEN
 
 ## Objective
 
@@ -18,7 +18,7 @@ Phase 1 is intentionally split into bounded workstreams:
 4. **1D — Browser, Accessibility & Visual Evidence — CLOSED_GREEN**
 5. **1E — CI & GitHub Governance — CLOSED_GREEN**
 6. **1F — Minimal Engineering Bootstrap & Proof — CLOSED_GREEN**
-7. **1G — Phase 1 Closeout — ACTIVE**
+7. **1G — Phase 1 Closeout — CLOSED_GREEN**
 
 Phase 1F was executed only after 1A–1E were frozen. Phase 1G is documentation, UAT, and governance closeout only.
 
@@ -176,7 +176,13 @@ Implemented result:
 - added no Wening product UI beyond the minimal technical smoke surface;
 - recorded canonical commands and CI evidence.
 
-## 1G — Closeout — ACTIVE
+## 1G — Closeout — CLOSED_GREEN
+
+Product-owner engineering-baseline UAT: **PASS**.
+
+Main-branch protection is active through the `Protect main` repository ruleset.
+
+Phase 1 is accepted and Phase 2 is the next allowed phase.
 
 Phase 1 closes only after:
 

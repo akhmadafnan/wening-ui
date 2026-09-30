@@ -1,11 +1,13 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 1 — Repository & Engineering Baseline  
+**Canonical phase:** PHASE 1 — CLOSED_GREEN
 **Phase 0 status:** CLOSED_GREEN  
 **Tracking issue:** #3  
+**Phase 1 status:** CLOSED_GREEN
+**Next allowed phase:** PHASE 2 — Design Tokens & Theme Architecture
 **Previous phase:** PHASE 0 — CLOSED_GREEN  
-**Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED  
-**Active workstream:** PHASE 1G — Phase 1 Closeout
+**Implementation status:** ENGINEERING BASELINE COMPLETE — PRODUCT UI IMPLEMENTATION NOT YET STARTED
+**Active workstream:** NONE — PHASE 2 NOT YET STARTED
 
 ## Phase 0 closeout
 
@@ -118,19 +120,24 @@ See `docs/CI_GOVERNANCE.md`.
 
 Implementation and CI evidence are recorded in `docs/PHASE1F_CLOSEOUT.md`.
 
+## Phase 1 closeout
+
+**PHASE 1 — CLOSED_GREEN**
+
+Product-owner UAT: **PASS**.
+
+Canonical closeout evidence is recorded in `docs/PHASE1_CLOSEOUT.md`.
+
 ## Current allowed work
 
-Phase 1G may now:
+Phase 2 may begin only after its tracking issue/branch is opened and the Phase 1 baseline is re-oriented.
 
-- synchronize final canonical documentation;
-- verify final Git and CI evidence;
-- review the complete Phase 1 pull request diff;
-- perform product-owner engineering-baseline UAT;
-- close Phase 1 and authorize Phase 2 only after explicit acceptance.
+- define and freeze semantic design tokens and theme architecture only.
+
 
 ## Still NOT allowed
 
-Until Phase 1 itself is frozen, do not:
+Until Phase 2 is explicitly opened and scoped, do not:
 
 - implement Wening design tokens;
 - build reusable UI components;

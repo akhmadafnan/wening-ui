@@ -30,7 +30,18 @@ html[data-w-shell-sidebar="collapsed"] {
     }
 
     html[data-w-shell-sidebar="collapsed"] [data-w-shell-brand],
-    html[data-w-shell-sidebar="collapsed"] [data-w-shell-footer-row] {
+    html[data-w-shell-sidebar="collapsed"] [data-w-shell-footer-row],
+    html[data-w-shell-sidebar="collapsed"] [data-w-shell-toggle] {
         justify-content: center;
+    }
+
+    [data-w-shell-toggle-icon] {
+        transition-property: transform;
+        transition-duration: var(--w-motion-normal);
+        transition-timing-function: var(--w-ease-standard);
+    }
+
+    html[data-w-shell-sidebar="collapsed"] [data-w-shell-toggle-icon] {
+        transform: rotate(180deg);
     }
 }

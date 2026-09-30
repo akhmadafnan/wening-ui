@@ -3,7 +3,7 @@
 **Tracking issue:** #6
 **Branch:** `phase/02-design-tokens-theme`
 **Status:** IN PROGRESS
-**Active workstream:** 2A — Token Architecture & Naming Contract
+**Active workstream:** 2B–2E — Parallel Domain Specification
 
 ## Objective
 
@@ -25,9 +25,9 @@ Phase 2 is organized into four execution waves.
 
 ### Wave A — Foundation contract (serial)
 
-**2A — Token Architecture & Naming Contract**
+**2A — Token Architecture & Naming Contract — CLOSED_GREEN**
 
-This is the only blocking architecture workstream. It freezes the contract that all later token domains consume.
+This blocking architecture workstream is CLOSED_GREEN and now freezes the contract that all later token domains consume.
 
 Artifacts:
 
@@ -47,7 +47,7 @@ Exit gate:
 
 ### Wave B — Domain specifications (parallelizable)
 
-Once 2A is frozen, 2B–2E may be researched/spec'd in parallel because they occupy distinct token domains.
+2A is frozen. 2B–2E are now authorized to proceed in parallel because they occupy distinct token domains.
 
 **2B — Color & Theme Semantics**
 
@@ -92,6 +92,7 @@ Artifacts:
 
 Parallel rule:
 
+- tracking issues are #7 (2B), #8 (2C), #9 (2D), and #10 (2E);
 - separate agents may research/spec 2B–2E concurrently;
 - they must not edit the same implementation files concurrently;
 - shared decisions are integrated only through the Phase 2 branch after 2A;
@@ -99,7 +100,7 @@ Parallel rule:
 
 ### Wave C — Integrated implementation
 
-**2F — Theme Runtime & CSS/Tailwind Implementation**
+**2F — Theme Runtime & CSS/Tailwind Implementation** — tracked by #11
 
 Implement only the accepted token/theme architecture.
 
@@ -128,7 +129,7 @@ Responsibilities:
 
 ### Wave D — Verification & closeout
 
-**2G — Token Verification & Closeout**
+**2G — Token Verification & Closeout** — tracked by #12
 
 Evidence:
 

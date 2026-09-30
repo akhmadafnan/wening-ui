@@ -8,7 +8,7 @@
 **Phase 3 status:** IN PROGRESS
 **Previous phase:** PHASE 1 — CLOSED_GREEN
 **Implementation status:** APPLICATION SHELL IN PROGRESS — CORE PRIMITIVES/DATA/WORKFLOW NOT YET STARTED
-**Active workstream:** PHASE 3A — Shell Contract & Information Architecture
+**Active workstream:** PHASE 3B — Desktop Application Shell
 
 ## Phase 0 closeout
 
@@ -243,20 +243,45 @@ Execution plan: `docs/PHASE3_PLAN.md`
 
 Phase 3 turns the accepted backend/application direction into Wening's reusable application frame.
 
+## Phase 3A result
+
+**PHASE 3A — Shell Contract & Information Architecture: CLOSED_GREEN**
+
+Frozen contracts:
+
+- persistent desktop sidebar + topbar + page-header/content-frame anatomy;
+- 256px expanded sidebar / 72px collapsed sidebar / 64px topbar;
+- server-owned current-route state;
+- browser-local collapse/mobile state;
+- native `<dialog>` mobile navigation baseline;
+- shell-specific Blade contracts under `resources/views/components/wening/shell`;
+- shell-domain tokens may use `--w-shell-*`;
+- Inter-dominant neutral shell with primary-soft green current states;
+- no generic Phase 4 primitive API leakage.
+
+Canonical spec: `docs/SHELL_ARCHITECTURE.md`.
+
+Tracking lanes:
+
+- #18 — 3B Desktop Application Shell;
+- #19 — 3C Shell Navigation & Local State;
+- #20 — 3D Responsive & Mobile Application Shell;
+- #21 — 3E Shell Visual States & Context Slots;
+- #22 — 3F Shell Accessibility & Keyboard Baseline;
+- #23 — 3G Visual UAT & Closeout.
+
 ## Current allowed work
 
-Phase 3A may now:
+Phase 3B (#18) may now:
 
-- audit the existing token/theme specimen and Laravel view structure;
-- freeze shell anatomy and shell-specific component boundaries;
-- define desktop sidebar/topbar/content-frame behavior;
-- define navigation metadata/current-state semantics;
-- define local shell state ownership;
-- define responsive/mobile drawer behavior;
-- define accessibility/keyboard requirements;
-- prepare bounded shell implementation workstreams.
+- implement shell-specific Blade structure;
+- implement expanded desktop sidebar baseline;
+- implement topbar and page-header/content frame;
+- implement grouped navigation and server-owned current state;
+- consume Phase 2 semantic tokens only;
+- provide representative shell specimen content without becoming a dashboard.
 
-After 3A is frozen, shell implementation may proceed in bounded 3B–3F workstreams.
+3C–3F remain bounded follow-on lanes. 3G remains blocked until implementation/accessibility evidence is ready.
 
 ## Still NOT allowed
 

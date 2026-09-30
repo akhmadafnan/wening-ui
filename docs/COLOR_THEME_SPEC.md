@@ -37,7 +37,7 @@ This is a default Wening identity, not a mandatory product brand.
 | `--w-color-surface-elevated` | `#FFFFFF` | overlay/elevated base |
 | `--w-color-fg` | `#16181D` | primary text |
 | `--w-color-fg-muted` | `#59616D` | secondary text |
-| `--w-color-fg-subtle` | `#68707C` | lowest normal-text emphasis |
+| `--w-color-fg-subtle` | `#676F7B` | lowest normal-text emphasis |
 | `--w-color-fg-inverse` | `#FFFFFF` | text on dark/strong fills |
 | `--w-color-border` | `#E5E7EB` | decorative separators |
 | `--w-color-border-strong` | `#868E98` | identifiable control boundary |
@@ -119,7 +119,8 @@ Representative pairs calculated against WCAG relative luminance:
 |---|---:|
 | Light fg / page | 16.71:1 |
 | Light muted / page | 5.89:1 |
-| Light subtle / page | 4.71:1 |
+| Light subtle / page | 4.78:1 |
+| Light subtle / subtle surface | 4.53:1 |
 | Light primary / primary fg | 5.23:1 |
 | Light primary soft fg / soft | 6.10:1 |
 | Light strong control border / page | 3.12:1 |

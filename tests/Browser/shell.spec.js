@@ -4,19 +4,28 @@ test('desktop shell renders the frozen sidebar and topbar geometry', async ({ pa
     await page.setViewportSize({ width: 1366, height: 768 });
     await page.goto('/');
 
+    const root = page.locator('html');
     const sidebar = page.getByTestId('desktop-sidebar');
     const topbar = page.getByTestId('shell-topbar');
+    const main = page.getByRole('main');
 
     await expect(sidebar).toBeVisible();
     await expect(topbar).toBeVisible();
+    await expect(main).toBeVisible();
 
+    const rootBox = await root.boundingBox();
     const sidebarBox = await sidebar.boundingBox();
     const topbarBox = await topbar.boundingBox();
+    const mainBox = await main.boundingBox();
 
+    expect(rootBox).not.toBeNull();
     expect(sidebarBox).not.toBeNull();
     expect(topbarBox).not.toBeNull();
+    expect(mainBox).not.toBeNull();
+    expect(Math.round(rootBox.width)).toBe(1366);
     expect(Math.round(sidebarBox.width)).toBe(256);
     expect(Math.round(topbarBox.height)).toBe(64);
+    expect(mainBox.width).toBeGreaterThan(1000);
 });
 
 test('shell exposes semantic application landmarks and current navigation', async ({ page }) => {

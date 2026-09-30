@@ -146,3 +146,30 @@ test('representative semantic text pairs meet normal-text contrast in light and 
         expect(primaryRatio).toBeGreaterThanOrEqual(4.5);
     }
 });
+
+
+test('reference primary identity resolves to the accepted institutional green in light and dark', async ({ page }) => {
+    await resetTheme(page);
+    await page.goto('/');
+
+    const probe = page.getByTestId('focus-probe');
+
+    await page.getByRole('button', { name: 'Light' }).click();
+    expect(await probe.evaluate((element) => getComputedStyle(element).backgroundColor))
+        .toBe('rgb(15, 122, 69)');
+
+    await page.getByRole('button', { name: 'Dark' }).click();
+    expect(await probe.evaluate((element) => getComputedStyle(element).backgroundColor))
+        .toBe('rgb(102, 196, 147)');
+});
+
+test('typography exposes Sora display and Inter UI roles', async ({ page }) => {
+    await resetTheme(page);
+    await page.goto('/');
+
+    const displayFamily = await page.locator('h1').evaluate((element) => getComputedStyle(element).fontFamily);
+    const bodyFamily = await page.locator('body').evaluate((element) => getComputedStyle(element).fontFamily);
+
+    expect(displayFamily).toContain('Sora');
+    expect(bodyFamily).toContain('Inter');
+});

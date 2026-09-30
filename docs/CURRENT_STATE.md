@@ -191,6 +191,18 @@ Verified checkpoint:
 
 Corrective evidence included semantic-token guard hardening, axe-driven Light subtle-text contrast correction, and browser-independent reduced-motion assertion.
 
+## Product-owner typography refinement
+
+Typography direction is now LOCKED through D-066…D-068:
+
+- Sora = selective display/brand personality;
+- Inter = primary UI/reading workhorse;
+- frontend/public = Sora + Inter;
+- backend/application = Inter-dominant with selective Sora;
+- monospace = technical metadata only;
+- system-ui = fallback, not canonical identity;
+- no required remote font CDN.
+
 ## Current allowed work
 
 Phase 2G (#12) may now:

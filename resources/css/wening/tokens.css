@@ -23,19 +23,19 @@
     --w-ref-night-900: #11182a;
     --w-ref-night-950: #0a0e1a;
 
-    /* Reference palette: Wening indigo */
-    --w-ref-brand-50: #f1f3ff;
-    --w-ref-brand-100: #e2e6ff;
-    --w-ref-brand-200: #c8ceff;
-    --w-ref-brand-300: #b7bdff;
-    --w-ref-brand-350: #a6aeff;
-    --w-ref-brand-400: #a0a7ff;
-    --w-ref-brand-500: #858efa;
-    --w-ref-brand-600: #5360d6;
-    --w-ref-brand-700: #4650ba;
-    --w-ref-brand-800: #394496;
-    --w-ref-brand-900: #29355c;
-    --w-ref-brand-950: #1e2747;
+    /* Reference palette: Wening institutional green */
+    --w-ref-brand-50: #effaf4;
+    --w-ref-brand-100: #ddf5e8;
+    --w-ref-brand-200: #bce8d0;
+    --w-ref-brand-300: #93d8b5;
+    --w-ref-brand-350: #7ccda3;
+    --w-ref-brand-400: #66c493;
+    --w-ref-brand-500: #37a96e;
+    --w-ref-brand-600: #0f7a45;
+    --w-ref-brand-700: #0c6a3b;
+    --w-ref-brand-800: #095c33;
+    --w-ref-brand-900: #16412d;
+    --w-ref-brand-950: #0d2c1e;
 
     /* Typography */
     --w-font-display: Sora, Inter, ui-sans-serif, system-ui, sans-serif;

@@ -340,11 +340,12 @@ Rules:
 
 - native `dialog` behavior is preferred where it solves modal semantics;
 - Blade owns rendered shell/navigation structure;
-- Alpine owns client-only collapse/drawer coordination when native behavior alone is insufficient;
+- root-level pre-paint preference state (theme/sidebar geometry) may use a tiny Wening-owned browser module because it must resolve before normal component initialization;
+- Alpine remains the preferred declarative layer for richer local component interaction once a component actually benefits from it;
 - Livewire is prohibited for purely local shell state;
 - server-driven navigation/permissions may later be passed into Blade without making the shell itself Livewire.
 
-The reference app's exact Alpine delivery mechanism must be explicit before 3C implementation. It must not load the full Livewire runtime merely to obtain Alpine if a lighter direct integration is more appropriate.
+The reference app must not load the full Livewire runtime merely to obtain Alpine. Phase 3 may keep root shell persistence in a minimal Wening-owned JavaScript module and defer a direct Alpine package dependency until a concrete declarative interaction requires it.
 
 ## 12. Shell-specific Blade boundaries
 

@@ -3,7 +3,7 @@
 **Tracking issue:** #14
 **Branch:** `phase/03-application-shell`
 **Status:** IN PROGRESS
-**Active workstream:** 3A — Shell Contract & Information Architecture
+**Active workstream:** 3B — Desktop Application Shell
 
 ## Objective
 
@@ -30,7 +30,7 @@ Phase 3 uses four waves.
 
 ### Wave A — Contract
 
-**3A — Shell Contract & Information Architecture**
+**3A — Shell Contract & Information Architecture — CLOSED_GREEN**
 
 Freeze:
 
@@ -52,7 +52,7 @@ Exit:
 
 ### Wave B — Static shell structure
 
-**3B — Desktop Shell**
+**3B — Desktop Shell — ACTIVE** — tracked by #18
 
 Implement:
 
@@ -69,7 +69,7 @@ This lane may use static/default state first.
 
 ### Wave C — Behavior and responsive shell
 
-**3C — Shell Navigation & Local State**
+**3C — Shell Navigation & Local State** — tracked by #19
 
 Implement:
 
@@ -78,7 +78,7 @@ Implement:
 - local-state ownership;
 - theme/density integration reuse.
 
-**3D — Responsive / Mobile Shell**
+**3D — Responsive / Mobile Shell** — tracked by #20
 
 Implement:
 
@@ -88,7 +88,7 @@ Implement:
 - close behavior;
 - task-preserving content reflow.
 
-**3E — Shell Visual States**
+**3E — Shell Visual States** — tracked by #21
 
 Cover:
 
@@ -101,7 +101,7 @@ Cover:
 
 ### Wave D — Verification
 
-**3F — Accessibility & Keyboard Baseline**
+**3F — Accessibility & Keyboard Baseline** — tracked by #22
 
 Verify:
 
@@ -115,7 +115,7 @@ Verify:
 - reduced motion;
 - runtime error policy.
 
-**3G — Verification, Visual UAT & Closeout**
+**3G — Verification, Visual UAT & Closeout** — tracked by #23
 
 Evidence:
 

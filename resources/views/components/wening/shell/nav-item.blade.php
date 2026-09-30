@@ -6,6 +6,8 @@
 
 <a
     href="{{ $href }}"
+    aria-label="{{ $label }}"
+    data-w-shell-nav-item
     @if ($current) aria-current="page" @endif
     @class([
         'flex min-h-[var(--w-shell-nav-row)] items-center gap-3 rounded-w-md px-3 text-w-sm font-medium transition-colors',
@@ -19,5 +21,5 @@
         </span>
     @endisset
 
-    <span class="min-w-0 truncate">{{ $label }}</span>
+    <span class="min-w-0 truncate" data-w-shell-expanded-only>{{ $label }}</span>
 </a>

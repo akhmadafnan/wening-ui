@@ -1,9 +1,13 @@
 # Wening UI — Current State
 
-**Canonical phase:** PHASE 1 — Repository & Engineering Baseline  
+**Canonical phase:** PHASE 1 — CLOSED_GREEN
 **Phase 0 status:** CLOSED_GREEN  
-**Previous tracking issue:** #1  
-**Implementation status:** ENGINEERING BASELINE ONLY — UI IMPLEMENTATION NOT YET STARTED
+**Tracking issue:** #3  
+**Phase 1 status:** CLOSED_GREEN
+**Next allowed phase:** PHASE 2 — Design Tokens & Theme Architecture
+**Previous phase:** PHASE 0 — CLOSED_GREEN  
+**Implementation status:** ENGINEERING BASELINE COMPLETE — PRODUCT UI IMPLEMENTATION NOT YET STARTED
+**Active workstream:** NONE — PHASE 2 NOT YET STARTED
 
 ## Phase 0 closeout
 
@@ -24,25 +28,116 @@ The accepted baseline includes:
 
 See `docs/PHASE0_CLOSEOUT.md` and `docs/DECISION_REGISTER.md`.
 
+## Phase 1A result
+
+**PHASE 1A — Runtime & Version Freeze: CLOSED_GREEN**
+
+Frozen baseline:
+
+- PHP 8.3 compatibility floor;
+- PHP 8.4 recommended runtime/development baseline;
+- PHP 8.3 / 8.4 / 8.5 CI matrix;
+- Laravel 13.x;
+- Livewire 4.x with initial `^4.4` constraint;
+- Composer 2.10.x;
+- Node 24 LTS + npm 11.x;
+- Tailwind 4.x + Vite 8.x + laravel-vite-plugin 3.x;
+- committed Composer/npm lockfiles and reproducible install commands.
+
+See `docs/RUNTIME_VERSION_POLICY.md`.
+
+## Phase 1B result
+
+**PHASE 1B — Bootstrap & Repository Topology: CLOSED_GREEN**
+
+Frozen bootstrap:
+
+- fresh minimal Laravel 13 app;
+- no starter kit;
+- app-first root topology;
+- package extraction deferred;
+- no auth scaffold in Phase 1;
+- SQLite local/test default;
+- internal reference/style-guide surface in the same app later;
+- conventional Wening source locations;
+- strict environment/generated-file policy.
+
+See `docs/BOOTSTRAP_TOPOLOGY.md`.
+
+## Phase 1C result
+
+**PHASE 1C — Quality Toolchain: CLOSED_GREEN**
+
+Frozen quality baseline:
+
+- Laravel Pint 1.x;
+- Larastan 3.x / PHPStan 2.x, level 8;
+- Pest 4.x + pest-plugin-laravel 4.x;
+- architecture tests via Pest;
+- Laravel PAO retained for agent-optimized tool output;
+- dependency audits + production asset build;
+- no unnecessary frontend lint/refactor stack yet.
+
+See `docs/QUALITY_TOOLCHAIN.md`.
+
+## Phase 1D result
+
+**PHASE 1D — Browser, Accessibility & Visual Evidence: CLOSED_GREEN**
+
+Frozen browser evidence:
+
+- Playwright Test 1.x;
+- axe integration;
+- Chromium canonical visual baseline;
+- Firefox/WebKit behavioral smoke;
+- committed/reviewed screenshot baselines;
+- deterministic viewport matrix;
+- console/page/network error policy;
+- manual accessibility/UAT retained.
+
+See `docs/BROWSER_EVIDENCE.md`.
+
+## Phase 1E result
+
+**PHASE 1E — CI & GitHub Governance: CLOSED_GREEN**
+
+Frozen CI/governance:
+
+- GitHub Actions with explicit quality/test/frontend/browser jobs;
+- PHP 8.3/8.4/8.5 test matrix;
+- PHP 8.4 primary quality lane;
+- Node 24 frontend lane;
+- Chromium browser evidence;
+- PR/squash-merge project policy for main;
+- least privilege and non-mutating CI;
+- Dependabot update workflow.
+
+See `docs/CI_GOVERNANCE.md`.
+
+## Phase 1F result
+
+**PHASE 1F — Minimal Engineering Bootstrap & Proof: CLOSED_GREEN**
+
+Implementation and CI evidence are recorded in `docs/PHASE1F_CLOSEOUT.md`.
+
+## Phase 1 closeout
+
+**PHASE 1 — CLOSED_GREEN**
+
+Product-owner UAT: **PASS**.
+
+Canonical closeout evidence is recorded in `docs/PHASE1_CLOSEOUT.md`.
+
 ## Current allowed work
 
-Phase 1 may now:
+Phase 2 may begin only after its tracking issue/branch is opened and the Phase 1 baseline is re-oriented.
 
-- audit current stable runtime/framework versions;
-- choose exact supported versions;
-- decide minimal bootstrap/starter strategy;
-- define repository topology;
-- establish local development commands;
-- establish formatter/lint/static-analysis policy;
-- establish unit/feature/component/browser testing baseline;
-- establish accessibility and visual-regression tooling;
-- establish dependency/update policy;
-- establish CI and required evidence;
-- establish GitHub branch/PR protection strategy.
+- define and freeze semantic design tokens and theme architecture only.
+
 
 ## Still NOT allowed
 
-Until Phase 1 itself is frozen, do not:
+Until Phase 2 is explicitly opened and scoped, do not:
 
 - implement Wening design tokens;
 - build reusable UI components;
